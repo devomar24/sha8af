@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balance</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/widgets.css">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+
+<body>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title" id="exampleModalLongTitle">اشحن الرصيد </h6>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                </div>
+                <div class="modal-body text-center">
+                    <div class="input text-righted">
+                        <label for="">
+                            اسم البطاقه
+                        </label>
+                        <input type="text" placeholder="">
+                    </div>
+
+                    <div class="input text-righted">
+                        <label for="">
+                            نوع البطاقه
+                        </label>
+                        <input type="text" placeholder="">
+                    </div>
+
+                    <div class="input text-righted">
+                        <label for="">
+                            رقم البطاقه
+                        </label>
+                        <input type="text" placeholder="">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button">حفظ </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--user nav-->
+    <nav class="navbar user-nav navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                شغف
+            </a>
+
+            <div id="wrapper" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="main-item menu">
+                    <span class="line line01"></span>
+                    <span class="line line02"></span>
+                    <span class="line line03"></span>
+                </div>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link hasBorder" id="about" href="#">
+                            <i class="far fa-search-plus"></i>
+                            تصفح المشاريع
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hasBorder" id="brands" href="#">
+                            <i class="far fa-cog"></i>
+                            كيف يعمل شغف
+                        </a>
+                    </li>
+                </ul class="navbar-nav mr-auto">
+
+                <div class="admin">
+                    <ul>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="far fa-bell"></i>
+                                <span class="getter">
+                                    3
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-left  animate slideIn"
+                                aria-labelledby="navbarDropdown">
+                                <div class="title">
+                                    <span>
+                                        لديك 3 طلبات
+
+                                    </span>
+                                </div>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="far fa-envelope"></i>
+                                <span class="getter">
+                                    5
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-left animate slideIn"
+                                aria-labelledby="navbarDropdown">
+                                <div class="title">
+                                    <span>
+                                        لديك 3 اشعارات
+                                    </span>
+                                </div>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="profile">
+                                    <img src="img/avatar/hero.jpg" alt="" />
+                                </div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-left animate slideIn"
+                                aria-labelledby="navbarDropdown">
+                                <div class="title">
+                                    <span>
+                                        فلان الفلاني
+                                    </span>
+                                </div>
+                                <a class="dropdown-item" href="#">
+                                    <i class="far fa-user"></i> الصفحة الشخصية
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="far fa-cog"></i> الضبط
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="far fa-sign-out"></i> الخروج
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--balance-->
+    <div class="balance text-right">
+        <div class="container-fluid">
+            <div class="balance-space title-space">
+                <div class="upper d-flex">
+                    <div class="page-title">
+                        <h2 class="title">
+                            رصيد الحساب
+                        </h2>
+                    </div>
+
+                    <div class="add-balance">
+                        <button data-toggle="modal" data-target="#exampleModalCenter">
+                            اضافه رصيد
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="row text-center">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 parent">
+                        <div class="child">
+                            <div class="icon">
+                                <i class="far fa-money-bill"></i>
+                            </div>
+                            <h6>
+                                الرصيد الكلي
+                            </h6>
+                            <p>
+                                11.21265$
+                            </p>
+                        </div>
+                    </div>
+                    <!---->
+
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 parent">
+                        <div class="child">
+                            <div class="icon">
+                                <i class="far fa-wallet"></i>
+                            </div>
+                            <h6>
+                                الرصيد المعلق
+                            </h6>
+                            <p>
+                                11.2365$
+                            </p>
+                        </div>
+                    </div>
+                    <!---->
+
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 parent">
+                        <div class="child">
+                            <div class="icon">
+                                <i class="far fa-money-check"></i>
+                            </div>
+                            <h6>
+                                الرصيد المتاح
+                            </h6>
+                            <p>
+                                11.2365$
+                            </p>
+                        </div>
+                    </div>
+                    <!---->
+
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 parent">
+                        <div class="child">
+                            <div class="icon">
+                                <i class="far fa-credit-card"></i>
+                            </div>
+                            <h6>
+                                الرصيد القابل للسحب
+                            </h6>
+                            <p>
+                                11.2365$
+                            </p>
+                        </div>
+                    </div>
+                    <!---->
+                </div>
+
+                <div class="upper upper-2 d-flex">
+                    <div class="page-title">
+                        <h2 class="title">
+                            المعاملات الماليه
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 profits">
+                        <div class="child">
+                            <div class="profit">
+                                <div class="details">
+                                    <span>
+                                        السحب من اكمال مشروع
+                                    </span>
+
+                                    <a href="">
+                                        موقع المكتروني مميز
+                                    </a>
+                                </div>
+
+                                <div class="left-details">
+                                    <span class="date">
+                                        6 سبتمبر
+                                    </span>
+                                    <span class="price">
+                                        $74.365
+                                    </span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="child">
+                            <div class="profit">
+                                <div class="details">
+                                    <span>
+                                        السحب من اكمال مشروع
+                                    </span>
+
+                                    <a href="">
+                                        موقع المكتروني مميز
+                                    </a>
+                                </div>
+
+                                <div class="left-details">
+                                    <span class="date">
+                                        6 سبتمبر
+                                    </span>
+                                    <span class="price">
+                                        $74.365
+                                    </span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="child">
+                            <div class="profit">
+                                <div class="details">
+                                    <span>
+                                        السحب من اكمال مشروع
+                                    </span>
+
+                                    <a href="">
+                                        موقع المكتروني مميز
+                                    </a>
+                                </div>
+
+                                <div class="left-details">
+                                    <span class="date">
+                                        6 سبتمبر
+                                    </span>
+                                    <span class="price">
+                                        $74.365
+                                    </span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="child">
+                            <div class="profit">
+                                <div class="details">
+                                    <span>
+                                        السحب من اكمال مشروع
+                                    </span>
+
+                                    <a href="">
+                                        موقع المكتروني مميز
+                                    </a>
+                                </div>
+
+                                <div class="left-details">
+                                    <span class="date">
+                                        6 سبتمبر
+                                    </span>
+                                    <span class="price">
+                                        $74.365
+                                    </span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 show-first">
+                        <!--filter-->
+                        <div class="filter small-filter">
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                    <div class="child">
+                                        <div class="row">
+                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                                <div class="input">
+                                                    <label for="">
+                                                        نوع المعامله
+                                                    </label>
+                                                    <input type="text" placeholder="اختر اسم معين للمشروع " name=""
+                                                        id="">
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                                <div class="input">
+                                                    <label for="">
+                                                        الفتره الزمنيه من
+                                                    </label>
+                                                    <input type="date" name="" id="">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                                <div class="input">
+                                                    <label for="">
+                                                        الفتره الزمنيه الي
+                                                    </label>
+                                                    <input type="date" name="" id="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--filter end-->
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--footer-->
+    <footer>
+        <div class="custom-container">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 text-righted">
+                    <h5>
+                        من نحن
+                    </h5>
+                    <ul>
+                        <li>
+                            <a href="faq.html">
+                                السمتقلين
+                            </a>
+                        </li>
+                        <li>
+                            <a href="privacy.html">
+                                المشاريع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy.html">
+                                المشاريع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy.html">
+                                المشاريع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy.html">
+                                المشاريع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy.html">
+                                شروط الاستخدام
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                    <h5>
+                        الروابط
+                    </h5>
+                    <ul>
+                        <li>
+                            <a href="faq.html">
+                                السمتقلين
+                            </a>
+                        </li>
+                        <li>
+                            <a href="privacy.html">
+                                المشاريع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy.html">
+                                المشاريع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy.html">
+                                المشاريع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy.html">
+                                المشاريع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy.html">
+                                شروط الاستخدام
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                    <h5>
+                        اتصل بنا
+                    </h5>
+                    <ul>
+                        <li>
+                            <a href="faq.html">
+                                السمتقلين
+                            </a>
+                        </li>
+                        <li>
+                            <a href="privacy.html">
+                                المشاريع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy.html">
+                                المشاريع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy.html">
+                                المشاريع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy.html">
+                                المشاريع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy.html">
+                                شروط الاستخدام
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6 col-lg-12 col-xl-12">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 linker">
+                            <div class="d-flex">
+                                <span class="span-t">
+                                    تابعنا علي
+                                </span>
+                                <div class="d-flex">
+                                    <span class="social-icon">
+                                        <a href="">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </span>
+
+                                    <span class="social-icon">
+                                        <a href="">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </span>
+
+                                    <span class="social-icon">
+                                        <a href="">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </span>
+
+                                    <span class="social-icon">
+                                        <a href="">
+                                            <i class="fab fa-google"></i>
+                                        </a>
+                                    </span>
+
+                                    <span class="social-icon">
+                                        <a href="">
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 linker">
+                            <div class="d-flex">
+                                <span class="span-t">
+                                    حمل التطبيق
+                                </span>
+                                <div class="d-flex">
+                                    <span class="social-icon">
+                                        <a href="">
+                                            <i class="fab fa-apple"></i>
+                                        </a>
+                                    </span>
+
+                                    <span class="social-icon">
+                                        <a href="">
+                                            <i class="fab fa-android"></i>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyRights text-center">
+                <p>
+                    <script>
+                        document.write(new Date().getFullYear());
+                    </script>
+                    &copf;
+                    جميع الحقوق محفوظة شغف
+                </p>
+
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile settings</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/widgets.css">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+
+<body>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title" style="font-size: 0.80rem;" id="exampleModalLongTitle"> تعديل الملف الشخصي
+                    </h6>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                </div>
+                <div class="modal-body text-center">
+                    <div class="row">
+                        <div class="other-input text-righted col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                            <label for="">
+                                الاسم
+                            </label>
+                            <input type="text" placeholder="فلان الفلاني">
+                        </div>
+
+                        <div class="other-input text-righted col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                            <div class="set-input">
+                                <label for="">
+                                    الوظيفه
+                                </label>
+
+                                <select name="" id="">
+                                    <option value="1" disabled>مصمم</option>
+                                    <option value="1">مبرمج</option>
+                                    <option value="1">اخرى</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="other-input text-righted col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                            <label for="">
+                                الدوله
+                            </label>
+                            <input type="text" placeholder="السعوديه ">
+                        </div>
+
+                        <div class="other-input text-righted col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                            <label for="">
+                                رقم الهاتف
+
+                            </label>
+                            <input type="text" placeholder="56755659869 ">
+                        </div>
+
+                        <div class="other-input text-righted col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                            <label for="">
+                                تأكيد رقم الهاتف
+                            </label>
+                            <input type="text" placeholder=" --------">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button">حفظ </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--user nav-->
+    <nav class="navbar user-nav navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                شغف
+            </a>
+
+            <div id="wrapper" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="main-item menu">
+                    <span class="line line01"></span>
+                    <span class="line line02"></span>
+                    <span class="line line03"></span>
+                </div>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link hasBorder" id="" href="projects.html">
+                            <i class="far fa-search-plus"></i>
+                            تصفح المشاريع
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hasBorder" id="brands" href="#">
+                            <i class="far fa-cog"></i>
+                            كيف يعمل شغف
+                        </a>
+                    </li>
+                </ul class="navbar-nav mr-auto">
+
+                <div class="admin">
+                    <ul>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="far fa-bell"></i>
+                                <span class="getter">
+                                    3
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-left  animate slideIn"
+                                aria-labelledby="navbarDropdown">
+                                <div class="title">
+                                    <span>
+                                        لديك 3 طلبات
+
+                                    </span>
+                                </div>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="far fa-envelope"></i>
+                                <span class="getter">
+                                    5
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-left animate slideIn"
+                                aria-labelledby="navbarDropdown">
+                                <div class="title">
+                                    <span>
+                                        لديك 3 اشعارات
+                                    </span>
+                                </div>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="profile">
+                                    <img src="img/avatar/hero.jpg" alt="" />
+                                </div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-left animate slideIn"
+                                aria-labelledby="navbarDropdown">
+                                <div class="title">
+                                    <span>
+                                        فلان الفلاني
+                                    </span>
+                                </div>
+                                <a class="dropdown-item" href="#">
+                                    <i class="far fa-user"></i> الصفحة الشخصية
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="far fa-cog"></i> الضبط
+                                </a>
+                                <a class="dropdown-item" href="balance.html">
+                                    <i class="far fa-money-bill"></i> الرصيد
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="far fa-sign-out"></i> الخروج
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!--profile setting-->
+    <div class="profile-settings">
+        <div class="container-fluid">
+            <div class="page-title">
+                <h2 class="title">
+                    تعديل الحساب الشخصي
+                </h2>
+            </div>
+
+
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
+                    <div class="child">
+                        <div class="profile-info text-righted">
+                            <div class="user-profile">
+                                <img src="img/avatar/hero.jpg" alt="">
+
+                                <!--change image-->
+                                <div class="change-image">
+                                    <input type="file" name="" id="change" accept="img/*">
+                                    <label for="change">
+                                        <i class="far fa-camera"></i>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <h4 class="user-name">
+                                    فلان الفلاني
+                                </h4>
+
+                                <span class="job">
+                                    <i class="far fa-briefcase"></i>
+                                    مصمم
+                                </span>
+                                <span class="job">
+                                    <i class="far fa-map-marker-alt"></i>
+                                    السعوديه
+                                </span>
+
+                                <div class="cv">
+                                    <p>
+                                        “لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود
+                                        تيمبور
+                                        أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم,كيواس
+
+                                    </p>
+                                </div>
+                                <button data-toggle="modal" class="edit-profile" data-target="#exampleModalCenter2">
+                                    <i class="far fa-edit"></i>
+                                    تعديل الملف الشخصي
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="child text-righted" style=" margin-top: 20px;">
+                        <h6 style="font-weight: 700;">
+                            الاعدادات
+                        </h6>
+                        <div class="set-tab">
+                            <button class="settingstablinks tab-button " onclick="openTab(event, 'setOne')"
+                                id="settingsDefaultOpen">
+                                <i class="far fa-user"></i>
+                                الملف الشخصي
+                            </button>
+                            <button class="settingstablinks tab-button " onclick="openTab(event, 'setTwo')">
+                                <i class="far fa-tasks"></i>
+                                الاعمال
+                            </button>
+                            <button class="settingstablinks tab-button " onclick="openTab(event, 'setThree')">
+                                <i class="far fa-bell"></i>
+                                الاشعارات
+                            </button>
+
+                            <button class="settingstablinks tab-button " onclick="openTab(event, 'setFour')">
+                                <i class="far fa-credit-card"></i>
+                                الهويه
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-9 margin-small-screen text-righted">
+                    <div class="child">
+                        <div class="profile-bar">
+                            <div class="bar-head">
+                                <span>40%</span>
+                                <span>100%</span>
+                            </div>
+
+                            <div class="bar-progress">
+                                <span class="progress-line"></span>
+                            </div>
+                        </div>
+                        <div class="user-lables" style="margin-top: 0;">
+                            <div class="row ">
+
+                                <!--first tab -->
+                                <div id="setOne" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 settabcontent">
+                                    <h3 class="tab-head">
+                                        الملف الشخصي
+                                    </h3>
+                                    <div class="row">
+
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                            <div class="set-input">
+                                                <label for="">
+                                                    نوع الحساب
+                                                </label>
+
+                                                <div class="type-col d-flex">
+                                                    <div class="selection d-flex">
+                                                        <input type="checkbox" name="" id="type1">
+                                                        <label class="type-label" for="type1">
+                                                            حساب مستقل (ابحث عن عمل)
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="selection d-flex">
+                                                        <input type="checkbox" name="" id="type2">
+                                                        <label class="type-label" for="type2">
+                                                            حساب مستقل (ابحث عن عمل)
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="selection d-flex">
+                                                        <input type="checkbox" name="" id="type4">
+                                                        <label class="type-label" for="type4">
+                                                            حساب مستقل (ابحث عن عمل)
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 got-margin">
+                                            <div class="set-input">
+                                                <label for="">
+                                                    اضف مهارات
+                                                </label>
+
+                                                <input type="text" name="" id="" placeholder="اضف مهاره جديده">
+                                            </div>
+
+                                            <div class="user-skills">
+                                                <span class="user-skill">
+                                                    <button class="skill-delete">
+                                                        &times;
+                                                    </button>
+                                                    تصميم
+                                                </span>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 got-margin">
+                                            <div class="set-input">
+                                                <label for="">
+                                                    السيره الذاتيه
+                                                </label>
+                                                <textarea placeholder="اكتب السيره الذاتيه..."></textarea>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+
+                                <!--second tab-->
+                                <div id="setTwo" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 settabcontent">
+                                    <h3 class="tab-head">
+                                        الاعمال
+                                    </h3>
+                                    <!--work-->
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding:0">
+                                        <div class="set-input">
+
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                                    <div class="indev">
+                                                        <label for="">
+                                                            اضف عمل
+                                                        </label>
+                                                        <div class="row">
+                                                            <div
+                                                                class="add-work col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+
+                                                                <div class="loader">
+                                                                    <input type="file" name="" id="work" accept="img/*">
+                                                                    <label for="work">
+                                                                        <i class="far fa-upload"></i>
+                                                                    </label>
+
+                                                                    <input type="file" name="" id="work" accept="img/*">
+                                                                    <label for="work">
+                                                                        <i class="far fa-upload"></i>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"
+                                                                    style="padding: 0; margin-top: 20px;">
+
+                                                                    <label for="">
+                                                                        رابط العمل
+                                                                    </label>
+
+                                                                    <input type="text" name="" id="" placeholder="">
+                                                                </div>
+
+                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"
+                                                                    style="padding: 0; margin-top: 0;">
+
+                                                                    <label for="">
+                                                                        المهارات التي تم بها العمل
+                                                                    </label>
+
+                                                                    <input type="text" name="" id="" placeholder="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!---->
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!--third tab-->
+                        <div id="setThree" class="settabcontent">
+                            <h3 class="tab-head">
+                                الاشعارات
+                            </h3>
+
+                            <div class="check-wrapper">
+
+                                <div class="check-row d-flex">
+                                    <div class="ios-switch pull-right">
+                                        <input id="iosDefault" checked name="someSwitchOption001" type="checkbox" />
+                                        <label for="iosDefault" class="label-default"></label>
+                                    </div>
+
+                                    <label class="input-label" for="iosDefault">
+                                        اشعارات الهاتف المحمول
+                                    </label>
+                                </div>
+
+                                <div class="check-row d-flex">
+                                    <div class="ios-switch pull-right">
+                                        <input id="iosDefault2" name="someSwitchOption001" type="checkbox" />
+                                        <label for="iosDefault2" class="label-default"></label>
+                                    </div>
+
+                                    <label class="input-label" for="iosDefault2">
+                                        اشعارات المشاريع الجديده
+
+                                    </label>
+                                </div>
+
+                                <div class="check-row d-flex">
+                                    <div class="ios-switch pull-right">
+                                        <input id="iosDefault3" name="someSwitchOption001" type="checkbox" />
+                                        <label for="iosDefault3" class="label-default"></label>
+                                    </div>
+
+                                    <label class="input-label" for="iosDefault3">
+                                        اشعارات العروض الجديده
+
+                                    </label>
+                                </div>
+
+                                <div class="check-row d-flex">
+                                    <div class="ios-switch pull-right">
+                                        <input id="iosDefault4" name="someSwitchOption001" checked type="checkbox" />
+                                        <label for="iosDefault4" class="label-default"></label>
+                                    </div>
+
+                                    <label class="input-label" for="iosDefault4">
+                                        اشعارات اخري
+
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--fourth tab-->
+                        <div id="setFour" class="settabcontent">
+                            <h3 class="tab-head">
+                                الهويه
+                            </h3>
+
+                            <div class="identity-error">
+                                <span>
+                                    لم يتم تأكيد الهويه بعد
+                                </span>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                                    <div class="add-identity">
+                                        <input type="file" name="" id="front">
+                                        <label for="front">
+                                            <i class="far fa-camera"></i>
+                                            <span>
+                                                صوره الهويه من الامام
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                                    <div class="add-identity">
+                                        <input type="file" name="" id="back">
+                                        <label for="back">
+                                            <i class="far fa-camera"></i>
+                                            <span>
+                                                صوره الهويه من الخلف
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6" style="margin-top: 14px;">
+                                    <div class="add-identity">
+                                        <input type="file" name="" id="both">
+                                        <label for="both">
+                                            <i class="far fa-camera"></i>
+                                            <span>
+                                                صوره الهويه والشخص بجانب بعض
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <!--save button-->
+                        <div class="save">
+                            <button class="save-button">
+                                حفظ التغييرات
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!--footer-->
+    <footer>
+        <div class="custom-container">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 text-righted">
+                    <h5>
+                        من نحن
+                    </h5>
+                    <ul>
+                        <li>
+                            <a href="faq.html">
+                                السمتقلين
+                            </a>
+                        </li>
+                        <li>
+                            <a href="privacy.html">
+                                المشاريع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy.html">
+                                المشاريع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy.html">
+                                المشاريع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy.html">
+                                المشاريع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy.html">
+                                شروط الاستخدام
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                    <h5>
+                        الروابط
+                    </h5>
+                    <ul>
+                        <li>
+                            <a href="faq.html">
+                                السمتقلين
+                            </a>
+                        </li>
+                        <li>
+                            <a href="privacy.html">
+                                المشاريع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy.html">
+                                المشاريع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy.html">
+                                المشاريع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy.html">
+                                المشاريع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy.html">
+                                شروط الاستخدام
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                    <h5>
+                        اتصل بنا
+                    </h5>
+                    <ul>
+                        <li>
+                            <a href="faq.html">
+                                السمتقلين
+                            </a>
+                        </li>
+                        <li>
+                            <a href="privacy.html">
+                                المشاريع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy.html">
+                                المشاريع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy.html">
+                                المشاريع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy.html">
+                                المشاريع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy.html">
+                                شروط الاستخدام
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6 col-lg-12 col-xl-12">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 linker">
+                            <div class="d-flex">
+                                <span class="span-t">
+                                    تابعنا علي
+                                </span>
+                                <div class="d-flex">
+                                    <span class="social-icon">
+                                        <a href="">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </span>
+
+                                    <span class="social-icon">
+                                        <a href="">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </span>
+
+                                    <span class="social-icon">
+                                        <a href="">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </span>
+
+                                    <span class="social-icon">
+                                        <a href="">
+                                            <i class="fab fa-google"></i>
+                                        </a>
+                                    </span>
+
+                                    <span class="social-icon">
+                                        <a href="">
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 linker">
+                            <div class="d-flex">
+                                <span class="span-t">
+                                    حمل التطبيق
+                                </span>
+                                <div class="d-flex">
+                                    <span class="social-icon">
+                                        <a href="">
+                                            <i class="fab fa-apple"></i>
+                                        </a>
+                                    </span>
+
+                                    <span class="social-icon">
+                                        <a href="">
+                                            <i class="fab fa-android"></i>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyRights text-center">
+                <p>
+                    <script>
+                        document.write(new Date().getFullYear());
+                    </script>
+                    &copf;
+                    جميع الحقوق محفوظة شغف
+                </p>
+
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/index.js"></script>
+
+    <script>
+        //profile settings tabs
+        document.getElementById("settingsDefaultOpen").click();
+
+        function openTab(evnt, setTabName) {
+            // Declare all variables
+            var x, settabcontent, settingstablinks;
+
+            // Get all elements with class="settabcontent" and hide them
+            settabcontent = document.getElementsByClassName("settabcontent");
+            for (x = 0; x < settabcontent.length; x++) {
+                settabcontent[x].style.display = "none";
+            }
+
+            // Get all elements with class="settingstablinks" and remove the class "active"
+            settingstablinks = document.getElementsByClassName("settingstablinks");
+            for (x = 0; x < settingstablinks.length; x++) {
+                settingstablinks[x].className = settingstablinks[x].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(setTabName).style.display = "block";
+            evnt.currentTarget.className += " active";
+        };
+    </script>
+</body>
+
+</html>

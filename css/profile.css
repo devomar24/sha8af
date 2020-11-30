@@ -1,0 +1,2100 @@
+/* import font */
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap");
+
+@font-face {
+    font-family: DroidArabicKufi;
+    src: url('../webfonts/DroidArabicKufi.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: DroidArabicKufi;
+    src: url('../webfonts/DroidKufiRegular.ttf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: DroidArabicKufi;
+    src: url('../webfonts/DroidArabicKufiBold.ttf');
+    font-weight: 700;
+}
+
+/* variables and defaul css */
+:root {
+    --primary: #00AFA9;
+    --opacity: #02dad38c;
+    --accent: #00FCF3;
+    --whitesmoke: rgb(247, 247, 247);
+    --lightgrey: rgba(250, 250, 250, 0.705);
+    --secondary: #169bf4;
+    --secondaryhover: #046baf;
+    --hover: #158885;
+    --pink: rgb(255, 97, 189);
+    --white: #fff;
+    --transition: .3s ease-in-out;
+    --padding: 100px 0;
+}
+
+body,
+html {
+    font-family: DroidArabicKufi;
+    overflow-x: hidden;
+    direction: rtl;
+    background-color: var(--lightgrey);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+button,
+input {
+    outline: none !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+.custom-container {
+    width: 85%;
+    margin: auto;
+}
+
+.text-righted {
+    text-align: right;
+}
+
+.navbar {
+    background-color: var(--white);
+}
+
+span.title {
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    background-color: var(--primary);
+    color: #fff;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+h2.title {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    text-align: right;
+}
+
+p.sub {
+    color: grey;
+    font-size: 0.88rem;
+    font-weight: 700;
+    width: 50%;
+    margin: auto;
+    text-align: right;
+}
+
+/* filter */
+.balance .filter .row .input label {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 700;
+}
+
+.balance .filter.small-filter .row .input {
+    margin-bottom: 15px;
+}
+
+.balance .filter .row .input input,
+.balance .filter .row .input select {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid lightgrey;
+    border-radius: 3px;
+    font-size: 0.88rem;
+    transition: var(--transition);
+}
+
+.balance .filter .row .input input:focus,
+.balance .filter .row .input select:focus {
+    border-color: var(--primary);
+}
+
+.balance .filter .row .input select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    width: 100%;
+    background: url("../img/icons/arrow-angle-pointing-down.svg") no-repeat 10px center;
+    background-size: 10px;
+    background-color: white;
+    cursor: pointer;
+    color: grey;
+    padding-left: 20px;
+    outline: none;
+}
+
+/* user */
+.user {
+    position: relative;
+    width: 100%;
+}
+
+.user .cover {
+    height: 40vh;
+    background-image: url('../img/background/cover.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* user info */
+.user .main-info {
+    padding: 0 0 100px 0;
+    background-color: var(--lightgrey)
+}
+
+.user .main-info .parent .child {
+    position: relative;
+}
+
+.user .main-info .parent .child .profile-container {
+    height: 150px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user .main-info .parent .child .profile-container .profile {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin: auto;
+    position: absolute;
+    top: -50%;
+    border: 5px solid var(--white);
+    user-select: none;
+}
+
+.user .main-info .parent .child .profile img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    user-select: none;
+    object-fit: cover;
+}
+
+.user .main-info .parent .child .profile-container .profile span.active {
+    height: 25px;
+    width: 25px;
+    background-color: #22e77b;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    right: 15px;
+    border: 3px solid var(--white);
+}
+
+.user .main-info .parent .child .info h4 {
+    font-weight: 700;
+    font-size: 1.2em;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.user .main-info .parent .child .info h4 span {
+    display: inline-block;
+    font-size: 15px;
+    padding: 5px 6px;
+    color: var(--white);
+    border-radius: 50%;
+    background-color: var(--primary);
+}
+
+.user .main-info .parent .child .info span {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 0.88rem;
+    color: rgb(97, 97, 97);
+}
+
+.user .main-info .parent .child .info span.job {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: rgb(97, 97, 97);
+}
+
+.user .main-info .parent .child .info span.location {
+    font-weight: 700;
+    font-size: 0.88rem;
+}
+
+.user .main-info .parent .child .info .medals p {
+    color: grey;
+    font-size: 0.80rem;
+}
+
+.user .main-info .parent .child .info .medals .d-flex {
+    justify-content: center;
+    align-items: center;
+}
+
+.user .main-info .parent .child button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 0.88rem;
+    transition: var(--transition);
+}
+
+.user .main-info .parent .child button:hover {
+    background-color: var(--hover);
+}
+
+
+/* about user */
+.user .main-info .parent .child .about {
+    padding: 50px 0 0 0;
+}
+
+.user .main-info .parent .child .about h6 {
+    font-weight: 700;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(226, 226, 226);
+}
+
+.user .main-info .parent .child .about p {
+    font-weight: 600;
+    font-size: 0.88rem;
+    line-height: 28px;
+}
+
+.user .main-info .parent .child .skills .skills-list span {
+    padding: 10px 15px;
+    font-size: 0.80rem;
+    font-weight: 700;
+    background-color: var(--white);
+    border-radius: 4px;
+    margin: 10px 0 0 8px;
+    display: inline-block;
+    box-shadow: 0 10px 10px rgba(189, 189, 189, 0.219);
+}
+
+.user .main-info .parent .child .skills .skills-list span i {
+    margin-left: 4px;
+}
+
+
+/* tabs container --projects, education and reviews-- --*/
+.tabs-sections {
+    padding: 100px 0 70px 0;
+    width: 100%;
+    height: auto;
+}
+
+/* Style the tab */
+.tabs-sections .child .tab {
+    overflow: hidden;
+    background-color: #ffffff;
+    display: flex;
+    width: 100%;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tabs-sections .child .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    font-size: 0.88rem;
+    font-weight: 700;
+}
+
+.tabs-sections .child .tab button i {
+    padding-left: 8px;
+}
+
+/* Change background color of buttons on hover */
+.tabs-sections .child .tab button:hover {
+    background-color: var(--lightgrey);
+}
+
+/* Create an active/current tablink class */
+.tabs-sections .child .tab button.active {
+    background-color: var(--primary);
+    color: #fff;
+}
+
+/* Style the tab content */
+.tabs-sections .child .tabcontent {
+    display: none;
+    border-top: none;
+    padding: 40px 0;
+}
+
+.tabs-sections .child .tabcontent .text-righted p {
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 600;
+    color: rgb(92, 92, 92);
+}
+
+/* user projects */
+
+.tabs-sections .child .tabcontent .child {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.tabs-sections .child .tabcontent .child .image {
+    height: 60vh;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 10px 10px rgba(214, 214, 214, 0.219);
+    transition: var(--transition);
+    position: relative;
+}
+
+.tabs-sections .child .tabcontent .child .image:hover {
+    transform: translateY(-5px);
+}
+
+.tabs-sections .child .tabcontent .child .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.tabs-sections .child .tabcontent .child .image .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background-color: var(--opacity);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+    opacity: 0;
+}
+
+.tabs-sections .child .tabcontent .child .image .overlay a {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    text-decoration: none;
+    color: var(--primary);
+    transition: var(--transition);
+    transform: scale(0);
+}
+
+.tabs-sections .child .tabcontent .child .image:hover .overlay {
+    opacity: 1;
+}
+
+.tabs-sections .child .tabcontent .child .image:hover .overlay a {
+    transform: scale(1);
+}
+
+.tabs-sections .child .tabcontent a.more {
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    text-decoration: none;
+    padding: 10px 30px;
+    color: grey;
+    font-size: 0.88rem;
+    display: inline-block;
+    margin-top: 40px;
+    transition: var(--transition);
+}
+
+.tabs-sections .child .tabcontent a.more:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+}
+
+/* user reviews */
+.tabs-sections .child .tabcontent.review,
+.tabs-sections .child .tabcontent.certificate {
+    background-color: var(--lightgrey);
+}
+
+.tabs-sections .child .review .row,
+.tabs-sections .child .certificate .row {
+    padding: 0 20px;
+}
+
+.tabs-sections .child .review .review-container {
+    padding: 30px;
+    background-color: var(--white);
+    border-radius: 3px;
+    margin-bottom: 30px;
+}
+
+.tabs-sections .child .review .review-container .upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tabs-sections .child .review .review-container .upper .thumbnail {
+    justify-content: center;
+    align-items: center;
+}
+
+.tabs-sections .child .review .review-container .upper .thumbnail .review-img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+.tabs-sections .child .review .review-container .upper .thumbnail .review-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.tabs-sections .child .review .review-container .upper .thumbnail .stars .rate {
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabs-sections .child .review .review-container .upper .thumbnail span.num {
+    font-weight: 700;
+    font-family: Poppins;
+}
+
+.tabs-sections .child .review .review-container .upper .thumbnail i.fa-star {
+    color: rgb(250, 172, 27);
+}
+
+
+.tabs-sections .child .review .review-container .upper p {
+    padding: 10px 15px;
+    background-color: var(--lightgrey);
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+.tabs-sections .child .review .review-container .upper p span {
+    font-family: Poppins;
+}
+
+.tabs-sections .child .review .review-container .review-body {
+    padding: 20px 0 0 0;
+}
+
+.tabs-sections .child .review .review-container .review-body .desc p {
+    font-size: 0.88rem;
+    color: rgb(94, 94, 94);
+    margin-bottom: 40px;
+}
+
+.tabs-sections .child .review .review-container .review-body .provider a {
+    font-weight: 0.88rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-left: 12px;
+}
+
+.tabs-sections .child .review .review-container .review-body .duration {
+    color: grey;
+    font-size: 0.80rem;
+    margin-top: 4px;
+}
+
+.tabs-sections .child .review .review-container .review-body .duration span {
+    font-family: Poppins;
+}
+
+.tabs-sections .child .review .review-container .review-body .tags .tag {
+    font-size: 0.80rem;
+    padding: 5px 15px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    margin-left: 8px;
+    background-color: var(--lightgrey);
+}
+
+.tabs-sections .child .review .message .child {
+    background-color: var(--white);
+    width: 95%;
+    padding: 30px 5px;
+    position: relative;
+}
+
+
+.tabs-sections .child .review .message .child h6 {
+    font-weight: 700;
+    margin-right: 14px;
+}
+
+.tabs-sections .child .review .message .child textarea {
+    resize: none;
+    font-size: 0.80rem;
+    border-radius: 5px;
+    border: 2px solid whitesmoke;
+    height: 160px;
+    padding: 10px;
+    width: 90%;
+    outline: none;
+}
+
+.tabs-sections .child .review .message .child button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary);
+    color: var(--white);
+    width: 90%;
+    font-weight: 700;
+    font-size: 0.88rem;
+    margin-top: 20px;
+    transition: var(--transition);
+}
+
+.user .main-info .parent .child button:hover {
+    background-color: var(--hover);
+}
+
+
+.tabs-sections .child .tabcontent.certificate h6 {
+    font-weight: 700;
+}
+
+.tabs-sections .child .education {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.tabs-sections .child .education .upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tabs-sections .child .education .upper .thumbnail {
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.tabs-sections .child .education .upper .thumbnail .the-image {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 15px;
+}
+
+.tabs-sections .child .education .upper .thumbnail .the-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.tabs-sections .child .education .upper .thumbnail .info p {
+    margin-bottom: 2px;
+    padding-bottom: 0;
+}
+
+.tabs-sections .child .education .upper .thumbnail .info p:first-child {
+    font-weight: 700;
+}
+
+.tabs-sections .child .education .upper .thumbnail .info p:nth-child(3) {
+    color: grey;
+}
+
+
+
+/* messages */
+
+.chat-wrapper {
+    padding: 20px 20px 100px 20px;
+}
+
+.chat-wrapper h4 {
+    font-weight: 700;
+    font-size: 1.4em;
+    padding: 0px;
+    margin: 20px 0px 40px 0;
+}
+
+.chat-wrapper .child {
+    padding: 20px;
+    border-radius: 5px;
+    background-color: var(--white);
+}
+
+.chat-wrapper .child .chat-search {
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+
+.chat-wrapper .child .chat-search .d-flex .input {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 70%;
+    flex: 1;
+}
+
+.chat-wrapper .child .chat-search .input input {
+    border: none;
+    padding: 10px;
+    font-size: 0.88rem;
+    position: relative;
+}
+
+.chat-wrapper .child .chat-search button {
+    background-color: whitesmoke;
+    font-size: 0.88rem;
+    position: relative;
+    flex: 1;
+}
+
+.chat-wrapper .child .recent {
+    border-top: 1px solid whitesmoke;
+    padding-top: 20px;
+    overflow-y: scroll;
+    height: 75vh;
+}
+
+.chat-wrapper .child .recent .person {
+    border-bottom: 1px solid whitesmoke;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.chat-wrapper .child .recent .person,
+.chat-wrapper .child .recent .person .details {
+    display: flex;
+    align-items: center;
+}
+
+.chat-wrapper .child .recent .person .profile {
+    height: 45px;
+    width: 45px;
+    margin-left: 12px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.chat-wrapper .child .recent .person .profile img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.chat-wrapper .child .recent .person .details {
+    justify-content: space-between;
+    width: 100%;
+}
+
+.chat-wrapper .child .recent .person .details h6 {
+    font-weight: 700;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-size: 0.90rem;
+}
+
+.chat-wrapper .child .recent .person .details a {
+    font-weight: 600;
+    font-size: 0.75rem;
+}
+
+.chat-wrapper .child .recent .person .details .time {
+    padding-left: 10px;
+}
+
+.chat-wrapper .child .recent .person .details .time span {
+    color: grey;
+    font-size: 0.75rem;
+}
+
+
+
+.chat-wrapper .msgs-container .child .box-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid whitesmoke;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.chat-wrapper .msgs-container .child .box-header h6 {
+    font-weight: 700;
+}
+
+.chat-wrapper .msgs-container .child .box-header span {
+    font-size: 0.75rem;
+    color: grey;
+}
+
+.chat-wrapper .msgs-container .child .msgs {
+    overflow-y: scroll;
+    height: 60vh;
+}
+
+.chat-wrapper .msgs-container .child .msgs .msg-wrapper,
+.chat-wrapper .msgs-container .child .msgs .msg-wrapper .user {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.chat-wrapper .msgs-container .child .msgs .msg-wrapper {
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+.chat-wrapper .msgs-container .child .msgs .msg-wrapper.message-left {
+    margin-right: auto;
+}
+
+.chat-wrapper .msgs-container .child .msgs .msg-wrapper.message-left .user {
+    flex-direction: row-reverse;
+}
+
+.chat-wrapper .msgs-container .child .msgs .msg-wrapper .user .profile {
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.chat-wrapper .msgs-container .child .msgs .msg-wrapper .user .profile img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.chat-wrapper .msgs-container .child .msgs .msg-wrapper .user .msg-details {
+    margin: 0 10px;
+}
+
+.chat-wrapper .msgs-container .child .msgs .msg-wrapper .user .msg-details p {
+    font-size: 0.80rem;
+    background-color: var(--secondary);
+    padding: 20px;
+    border-radius: 1000px;
+    color: var(--white);
+}
+
+.chat-wrapper .msgs-container .child .msgs .msg-wrapper.message-left .user .msg-details p {
+    background-color: var(--lightgrey);
+    color: rgb(37, 37, 37);
+}
+
+.chat-wrapper .msgs-container .child .msgs .msg-wrapper .user .msg-details .image {
+    height: 300px;
+    width: 300px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.chat-wrapper .msgs-container .child .msgs .msg-wrapper .user .msg-details .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.chat-wrapper .msgs-container .child .msgs .msg-wrapper .user .msg-details .attached {
+    background-color: #FF9100;
+    padding: 5px 10px;
+    border-radius: 100px;
+    color: var(--white);
+}
+
+.chat-wrapper .msgs-container .child .msgs .msg-wrapper .user .msg-details .attached a {
+    color: var(--white);
+}
+
+/* typing indicator */
+.typing {
+    border-radius: 20px;
+    background-color: whitesmoke;
+    padding: 10px;
+}
+
+.tiblock {
+    align-items: center;
+    display: flex;
+    height: 17px;
+}
+
+.ticontainer .tidot {
+    background-color: #90949c;
+}
+
+.tidot {
+    -webkit-animation: mercuryTypingAnimation 1.5s infinite ease-in-out;
+    border-radius: 50%;
+    display: inline-block;
+    height: 6px;
+    margin-right: 4px;
+    width: 6px;
+}
+
+@-webkit-keyframes mercuryTypingAnimation {
+    0% {
+        -webkit-transform: translateY(0px)
+    }
+
+    28% {
+        -webkit-transform: translateY(-5px)
+    }
+
+    44% {
+        -webkit-transform: translateY(0px)
+    }
+}
+
+.tidot:nth-child(1) {
+    -webkit-animation-delay: 200ms;
+}
+
+.tidot:nth-child(2) {
+    -webkit-animation-delay: 300ms;
+}
+
+.tidot:nth-child(3) {
+    -webkit-animation-delay: 400ms;
+}
+
+/* insert new msg */
+.chat-wrapper .msgs-container .child .insert {
+    margin-top: 20px;
+}
+
+.chat-wrapper .msgs-container .child .insert,
+.chat-wrapper .msgs-container .child .insert .inputs {
+    display: flex;
+    align-items: center;
+}
+
+.chat-wrapper .msgs-container .child .insert form {
+    flex: 2;
+}
+
+.chat-wrapper .msgs-container .child .insert .inputs {
+    background-color: var(--lightgrey);
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.chat-wrapper .msgs-container .child .insert .inputs input[type="file"] {
+    display: none;
+}
+
+.chat-wrapper .msgs-container .child .insert .inputs input[type="text"] {
+    border: none;
+    background-color: transparent;
+    font-size: 0.88rem;
+}
+
+.chat-wrapper .msgs-container .child .insert .inputs input[type="text"] {
+    flex: 2;
+    padding: 10px;
+}
+
+.chat-wrapper .msgs-container .child .insert .inputs .files {
+    display: flex;
+    align-items: center;
+}
+
+.chat-wrapper .msgs-container .child .insert .inputs label {
+    margin-right: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: rgb(231, 231, 231);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: 5px;
+    flex-shrink: 0;
+}
+
+.chat-wrapper .msgs-container .child .insert .inputs label:hover {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.chat-wrapper .msgs-container .child .insert button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: var(--white);
+    background-color: var(--primary);
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.chat-wrapper .msgs-container .child .insert button:hover {
+    background-color: var(--hover);
+}
+
+/* balance page */
+.balance .title-space {
+    padding: 40px 0;
+}
+
+.balance .upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.balance .upper.upper-2 {
+    margin-top: 40px;
+}
+
+.balance .upper .add-balance button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 0.80rem;
+    border: none;
+    color: var(--white);
+    background-color: var(--primary);
+}
+
+.balance .title-space h4 {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.balance .title-space h4 a {
+    text-decoration: none;
+    color: #000;
+}
+
+.balance .title-space h4 span {
+    color: grey;
+}
+
+.balance .row {
+    margin-top: 10px;
+}
+
+.balance .row .child {
+    background-color: #fff;
+    box-shadow: 0 40px 40px rgba(100, 100, 100, 0.08);
+    padding: 20px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.balance .row .child .icon {
+    height: 60px;
+    width: 60px;
+    border-radius: 10px;
+    background-color: #60d4d128;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+    margin: auto;
+}
+
+.balance .row .child .icon i {
+    font-size: 20px;
+    color: #03c4bd;
+}
+
+.balance .row .child h6 {
+    font-weight: 700;
+    font-size: 1em;
+    color: #000;
+    margin-top: 20px;
+}
+
+.balance .row .child p {
+    color: rgb(0, 0, 0);
+    font-size: 1.2em;
+    font-family: Poppins;
+    margin-top: 20px;
+}
+
+.balance .row .parent:nth-child(2) .child .icon {
+    background-color: rgba(255, 192, 203, 0.5);
+}
+
+.balance .row .parent:nth-child(2) .child .icon i {
+    color: rgb(218, 77, 101);
+}
+
+.balance .row .parent:nth-child(4) .child .icon {
+    background-color: rgba(206, 192, 255, 0.5);
+}
+
+.balance .row .parent:nth-child(4) .child .icon i {
+    color: rgb(92, 46, 255);
+}
+
+.balance .row .parent:nth-child(3) .child .icon {
+    background-color: rgba(192, 255, 195, 0.5);
+}
+
+.balance .row .parent:nth-child(5) .child .icon {
+    background-color: rgba(251, 255, 192, 0.719);
+}
+
+.balance .row .parent:nth-child(5) .child .icon i {
+    color: rgb(211, 211, 0);
+}
+
+
+.balance .row .parent:nth-child(6) .child .icon {
+    background-color: rgba(192, 248, 255, 0.5);
+}
+
+
+.balance .row .parent:nth-child(7) .child .icon {
+    background-color: rgba(245, 192, 255, 0.5);
+}
+
+.balance .row .parent:nth-child(7) .child .icon i {
+    color: rgb(173, 0, 207);
+}
+
+.balance .row .parent:nth-child(8) .child .icon {
+    background-color: rgba(238, 255, 192, 0.74);
+}
+
+.balance .row .parent:nth-child(8) .child .icon i {
+    color: rgba(153, 209, 0, 0.74)
+}
+
+/* finnacial treatments */
+
+.balance .row .profits {
+    padding-top: 10px;
+}
+
+.balance .row .child .profit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.balance .row .child .profit .left-details span.price {
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 1em;
+    color: #000;
+    border-radius: 5px;
+    display: block;
+    margin-top: 10px;
+}
+
+.balance .row .child .profit .left-details span.date {
+    color: grey;
+}
+
+.balance .row .child .profit .details span {
+    color: grey;
+    font-size: 0.88rem;
+}
+
+.balance .row .child .profit .details a {
+    font-weight: 700;
+    text-decoration: none;
+    color: #000;
+    display: block;
+    margin-top: 10px;
+}
+
+/* moadal */
+.modal .modal-footer button {
+    background-color: var(--primary);
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+    color: var(--white)
+}
+
+.modal .modal-header button.close {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+}
+
+.modal .modal-body .input label {
+    font-weight: 700;
+    font-size: 0.88rem;
+}
+
+.modal .modal-body .input input {
+    margin-bottom: 10px;
+    width: 100%;
+    border: 1px solid lightgrey;
+    padding: 10px;
+    border-radius: 5px;
+    transition: var(--transition);
+}
+
+.modal .modal-body .input input:focus {
+    border-color: var(--primary);
+}
+
+
+/* settings modal */
+
+.modal .modal-body .other-input label {
+    font-weight: 700;
+    font-size: 0.80rem;
+}
+
+.modal .modal-body .other-input input,
+.modal .modal-body .other-input select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid whitesmoke;
+    font-size: 0.80rem;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: var(--transition);
+    color: grey;
+    outline: none !important;
+}
+
+.modal .modal-body .other-input input:focus,
+.modal .modal-body .other-input select:focus {
+    border-color: var(--primary);
+}
+
+.modal .modal-body .other-input select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    width: 100%;
+    background: url("../img/icons/arrow-angle-pointing-down.svg") no-repeat 10px center;
+    background-size: 10px;
+    background-color: white;
+    cursor: pointer;
+    color: grey;
+    padding-left: 20px;
+    outline: none;
+}
+
+/* profile settings */
+.profile-settings {
+    margin-bottom: 40px;
+}
+
+.profile-settings .page-title {
+    padding: 40px 0;
+}
+
+.profile-settings .child {
+    border-radius: 5px;
+    background-color: var(--white);
+    padding: 20px;
+    box-shadow: 0 40px 40px rgba(100, 100, 100, 0.08)
+}
+
+.profile-settings .child .profile-bar {
+    margin-bottom: 20px;
+}
+
+.profile-settings .child .profile-bar .bar-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-settings .child .profile-bar .bar-head span {
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 0.88rem;
+    color: grey;
+    color: var(--secondary);
+}
+
+.profile-settings .child .profile-bar .bar-head span:last-child {
+    color: var(--primary);
+}
+
+.profile-settings .child .profile-bar .bar-progress {
+    height: 5px;
+    width: 100%;
+    background-color: whitesmoke;
+    border-radius: 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-settings .child .profile-bar .bar-progress .progress-line {
+    background-color: var(--primary);
+    width: 40%;
+    position: absolute;
+    border-radius: 100px;
+    height: 100%;
+}
+
+/* Style the tab */
+.profile-settings .child .set-tab {
+    overflow: hidden;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Style the buttons that are used to open the tab content */
+.profile-settings .child .set-tab .tab-button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    border-bottom: 1px solid whitesmoke;
+    text-align: right;
+    font-size: 0.88rem;
+}
+
+.profile-settings .child .set-tab .tab-button:last-child {
+    border: none;
+}
+
+.profile-settings .child .set-tab .tab-button i {
+    margin-left: 8px;
+}
+
+/* Change background color of buttons on hover */
+.profile-settings .child .set-tab .tab-button:hover {
+    background-color: var(--lightgrey);
+}
+
+/* Create an active/current tablink class */
+.profile-settings .child .set-tab .tab-button.active {
+    background-color: var(--primary);
+    color: #fff;
+}
+
+/* Style the tab content */
+.profile-settings .child .settabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+}
+
+.profile-settings .child .settabcontent h3.tab-head {
+    font-size: 1em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid whitesmoke;
+}
+
+.profile-settings .child .user-profile {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+}
+
+.profile-settings .child .user-profile img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-settings .child .user-profile .change-image input[type="file"] {
+    display: none;
+}
+
+.profile-settings .child .user-profile .change-image label {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    border: 3px solid rgb(185, 185, 185);
+    cursor: pointer;
+    transition: var(--transition);
+    position: absolute;
+    bottom: 0px;
+}
+
+.profile-settings .child .user-profile .change-image label:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+}
+
+.profile-settings .child h4 {
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+.profile-settings .child span.job {
+    color: grey;
+    font-size: 0.88rem;
+    display: block
+}
+
+.profile-settings .cv p {
+    font-size: 0.80rem;
+    text-align: right;
+    margin-top: 10px;
+}
+
+.profile-settings .child .user-lables {
+    margin-top: 40px;
+    padding: 0 10px;
+}
+
+.profile-settings .child .user-lables .set-input label {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.profile-settings .child .user-lables .set-input input[type="text"],
+.profile-settings .child .user-lables .set-input input[type="date"],
+.profile-settings .child .user-lables .set-input input[type="time"],
+.profile-settings .child .user-lables .set-input input[type="password"],
+.profile-settings .child .user-lables .set-input textarea,
+.profile-settings .child .user-lables .set-input select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid whitesmoke;
+    font-size: 0.88rem;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: var(--transition);
+    color: grey;
+    outline: none !important;
+}
+
+.profile-settings .child .user-lables .set-input textarea {
+    height: 150px;
+    resize: none;
+    padding: 5px;
+}
+
+.profile-settings .child .user-lables .set-input input:focus,
+.profile-settings .child .user-lables .set-input textarea:focus,
+.profile-settings .child .user-lables .set-input select:focus {
+    border-color: var(--primary);
+}
+
+.profile-settings .child .user-lables .set-input select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    width: 100%;
+    background: url("../img/icons/arrow-angle-pointing-down.svg") no-repeat 10px center;
+    background-size: 10px;
+    background-color: white;
+    cursor: pointer;
+    color: grey;
+    padding-left: 20px;
+    outline: none;
+}
+
+.profile-settings .child .user-lables .user-skills span.user-skill {
+    padding: 10px 15px;
+    font-size: 0.80rem;
+    font-weight: 700;
+    background-color: var(--white);
+    border-radius: 4px;
+    margin: 10px 0 0 8px;
+    display: inline-block;
+    box-shadow: 0 10px 10px rgba(189, 189, 189, 0.219);
+    position: relative;
+}
+
+.profile-settings .child .user-lables .user-skills span.user-skill button.skill-delete {
+    position: absolute;
+    border: none;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: crimson;
+    font-weight: 700;
+    color: var(--white);
+    top: -5px;
+    left: -5px;
+}
+
+.profile-settings .child .user-lables .got-margin {
+    margin-top: 30px;
+    border-top: 1px solid whitesmoke;
+    padding-top: 20px;
+}
+
+.profile-settings .child .user-lables .add-work,
+.profile-settings .child .add-identity {
+    padding: 0;
+}
+
+.profile-settings .child .user-lables .add-work input[type="file"],
+.profile-settings .child .add-identity input[type="file"] {
+    display: none;
+}
+
+.profile-settings .child .add-identity label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 100%;
+    border: 2px dashed whitesmoke;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 25px;
+    color: grey;
+    transition: var(--transition);
+}
+
+.profile-settings .child .add-identity label {
+    font-size: 0.88rem;
+    flex-direction: column;
+}
+
+.profile-settings .child .add-identity label i {
+    font-size: 25px;
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.profile-settings .child .user-lables .add-work label:hover,
+.profile-settings .child .add-identity label:hover {
+    background-color: whitesmoke;
+}
+
+.profile-settings .child .user-lables .add-work label {
+    height: auto;
+    padding: 20px;
+    border: 2px dashed whitesmoke;
+
+}
+
+.profile-settings .child .user-lables .add-work label i {
+    font-size: 20px;
+    padding: 10px;
+    background-color: lightgrey;
+    border-radius: 5px;
+}
+
+.profile-settings .child .user-lables .works {
+    margin-top: 20px;
+}
+
+.profile-settings .child .user-lables .works .child {
+    height: 50vh;
+    position: relative;
+    border-radius: 5px;
+    padding: 0;
+    box-shadow: none;
+}
+
+.profile-settings .child .user-lables .works .child img {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.profile-settings .child .user-lables .works .child button.work-delete {
+    position: absolute;
+    border: none;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: crimson;
+    font-weight: 700;
+    color: var(--white);
+    top: -5px;
+    left: -5px;
+}
+
+.profile-settings .child .check-wrapper .check-row {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid whitesmoke;
+}
+
+.profile-settings .child .check-wrapper .check-row:first-child {
+    margin-top: 40px;
+}
+
+.profile-settings .child .check-wrapper .check-row:last-child {
+    border: none;
+}
+
+.profile-settings .child .check-wrapper .check-row .ios-switch>input[type="checkbox"] {
+    display: none;
+}
+
+.profile-settings .child .check-wrapper .check-row .ios-switch>label {
+    cursor: pointer;
+    height: 0px;
+    position: relative;
+    width: 30px;
+    background-color: whitesmoke;
+}
+
+.profile-settings .child .check-wrapper .check-row .ios-switch>label::before {
+    background: rgb(255, 255, 255);
+    border: 2px solid lightgrey;
+    border-radius: 20px;
+    content: '';
+    height: 20px;
+    margin-top: -10px;
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    width: 34px;
+}
+
+.profile-settings .child .check-wrapper .check-row .ios-switch>label::after {
+    background: rgb(255, 255, 255);
+    border-radius: 16px;
+    content: '';
+    height: 20px;
+    left: -5px;
+    border: 2px solid lightblue;
+    margin-top: -5px;
+    position: absolute;
+    top: -5px;
+    transition: all 0.3s ease-in-out;
+    width: 20px;
+}
+
+.profile-settings .child .check-wrapper .check-row .ios-switch>input[type="checkbox"]:checked+label::before {
+    background: var(--primary);
+    border: var(--primary);
+}
+
+.profile-settings .child .check-wrapper .check-row .ios-switch>input[type="checkbox"]:checked+label::after {
+    /*   background: inherit; */
+    left: 10px;
+}
+
+.profile-settings .child .check-wrapper .check-row .input-label {
+    position: relative;
+    margin-right: 12px;
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    color: rgb(53, 53, 53);
+    font-size: 0.80rem;
+}
+
+.profile-settings .child .identity-error {
+    padding: 5px;
+    border-radius: 3px;
+    background-color: rgba(255, 215, 223, 0.733);
+    color: crimson;
+    font-size: 0.88rem;
+    margin-bottom: 10px;
+}
+
+.profile-settings .child .save {
+    margin-top: 40px;
+    width: 100%;
+}
+
+.profile-settings .child .save button.save-button {
+    margin-right: auto;
+    background-color: var(--primary);
+    padding: 15px 20px;
+    border-radius: 5px;
+    display: block;
+    color: var(--white);
+    border: none;
+    font-size: 0.88rem;
+    transition: var(--transition);
+}
+
+.profile-settings .child .save button.save-button:hover {
+    background-color: var(--hover);
+}
+
+.profile-settings .selection {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    margin-left: 14px;
+}
+
+.profile-settings .selection:last-child {
+    margin-bottom: 0;
+}
+
+.profile-settings .selection input[type="checkbox"] {
+    border: 2px solid whitesmoke;
+    font-size: 0.88rem;
+    border-radius: 0;
+    margin-bottom: 0;
+    margin-top: 4px;
+    outline: none !important;
+}
+
+.profile-settings .child .type-col .type-label {
+    display: inline-block;
+    width: 100%;
+    margin-right: 8px;
+    font-size: 0.80rem !important;
+}
+
+.profile-settings .child .edit-profile {
+    display: block;
+    margin: auto;
+    border: none;
+    background-color: whitesmoke;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.80rem;
+    margin-top: 20px;
+    transition: var(--transition);
+}
+
+.profile-settings .child .edit-profile i {
+    margin-left: 4px;
+}
+
+.profile-settings .child .edit-profile:hover {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+/* work details */
+.work-details {
+    padding: 40px 0;
+}
+
+.work-details .child {
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.work-details .child h6 {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid whitesmoke;
+}
+
+.work-details .child a.link {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: var(--primary);
+    padding: 10px 20px;
+    font-size: 0.88rem;
+    color: var(--white);
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.work-details .child .image {
+    height: 60vh;
+}
+
+.work-details .child .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.work-details .child .top {
+    margin-top: 20px;
+}
+
+.work-details .child h5 {
+    font-size: 0.80rem;
+    margin-bottom: 20px;
+}
+
+.work-details .child h5 i {
+    margin-left: 4px;
+}
+
+.work-details .child .work-skills span.my-skill {
+    font-size: 0.80rem;
+    padding: 5px 10px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    margin-left: 0;
+    background-color: var(--lightgrey);
+    display: inline-block;
+    font-family: Poppins;
+    margin-bottom: 6px;
+}
+
+.work-details .child .share {
+    padding: 5px 10px 10px 10px;
+    width: 100%;
+    margin: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.work-details .child .share .socials {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.work-details .child .share .socials span {
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    margin-left: 4px;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+/* media query */
+@media(max-width:1000px) {
+
+    h2.title,
+    .chat-wrapper h4 {
+        font-size: 1em;
+    }
+
+    .balance .upper .add-balance {
+        margin-bottom: 20px;
+    }
+
+    .balance .row .child {
+        margin-bottom: 20px;
+    }
+
+    .balance .row .child .profit .details a {
+        font-size: 0.88rem;
+    }
+
+    .balance .row .child .profit .details span {
+        font-size: 0.80rem;
+    }
+
+    .balance .row .child .profit .left-details span.price,
+    .balance .row .child .profit .left-details span.date {
+        font-size: 0.88rem;
+    }
+
+    .modal .modal-body .input label,
+    .filter .row .input label {
+        font-size: 0.80rem;
+    }
+
+    .show-first {
+        order: 1;
+    }
+
+    .profits {
+        order: 2;
+    }
+
+    .user .cover {
+        height: 30vh;
+    }
+
+    .user .main-info .parent .child .profile-container .profile {
+        height: 150px;
+        width: 150px;
+    }
+
+    .user .main-info .parent .child .profile-container {
+        height: 120px;
+    }
+
+    .user .main-info .parent .child .profile-container .profile span.active {
+        height: 18px;
+        width: 18px;
+        top: 8px;
+        right: 10px;
+    }
+
+    .user .main-info .parent .child .info h4 span {
+        font-size: 14px;
+        padding: 4px 5px;
+    }
+
+    .user .main-info .parent .child .about h6 {
+        font-size: 1em;
+    }
+
+    .user .main-info .parent .child .about p {
+        font-size: 0.80rem;
+    }
+
+    .tabs-sections {
+        padding-top: 20px;
+    }
+
+    .tabs-sections .child .tab button {
+        padding: 12px 10px;
+        font-size: 0.75rem;
+        width: 100%;
+    }
+
+    .tabs-sections .child .tab button i {
+        display: block;
+    }
+
+    .tabs-sections .child .tabcontent .child .image {
+        height: 40vh;
+    }
+
+    .tabs-sections .child .tabcontent a.more {
+        margin-top: 0;
+    }
+
+    .tabs-sections .child .review .col-xl-8 {
+        padding: 0;
+    }
+
+    .tabs-sections .child .review .review-container {
+        padding: 20px;
+    }
+
+    .tabs-sections .child .review .review-container .upper {
+        align-items: center;
+    }
+
+    .tabs-sections .child .review .review-container .review-body .duration {
+        margin-top: 0;
+    }
+
+    .tabs-sections .child .review .review-container .upper .thumbnail span.num {
+        font-size: 0.88rem;
+    }
+
+    .tabs-sections .child .review .review-container .upper p {
+        font-size: 0.88rem;
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    .tabs-sections .child .review .review-container .review-body {
+        padding: 10px 0 0 0;
+    }
+
+    .tabs-sections .child .review .review-container .review-body .desc p {
+        font-size: 0.80rem;
+    }
+
+    .tabs-sections .child .review .review-container .review-body .provider a {
+        font-size: 0.75rem;
+    }
+
+    .tabs-sections .message {
+        padding: 0;
+        order: 1;
+    }
+
+    .show-first {
+        order: 1;
+    }
+
+    .show-second {
+        order: 2;
+    }
+
+    .tabs-sections .child .review .message .child {
+        width: 100%;
+    }
+
+    .tabs-sections .child .review .message .child h6 {
+        font-size: 1em;
+    }
+
+    .tabs-sections .col-xl-6 {
+        padding: 0;
+    }
+
+
+    .tabs-sections .child .education .upper .thumbnail .info p:first-child {
+        font-size: 0.80rem;
+    }
+
+    .tabs-sections .child .education .upper .thumbnail .info p {
+        font-size: 0.75rem;
+    }
+
+    /* chat */
+    .chat-wrapper .col-12 {
+        padding: 0;
+    }
+
+    .chat-wrapper .child {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .chat-wrapper .child .recent {
+        height: 40vh;
+    }
+
+    .chat-wrapper .child .recent .person .details h6,
+    .chat-wrapper .msgs-container .child .box-header h6 {
+        font-size: 0.75rem;
+    }
+
+    .chat-wrapper .child .chat-search .d-flex {
+        width: 100%;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .chat-wrapper .child .chat-search .input input {
+        width: 80%;
+        font-size: 0.80rem;
+    }
+
+    .chat-wrapper .child .chat-search .d-flex {
+        margin-bottom: 10px;
+    }
+
+    .chat-wrapper .child .chat-search button {
+        font-size: 0.70rem;
+        margin-top: 10px;
+    }
+
+    .chat-wrapper .child .recent .person .profile,
+    .chat-wrapper .msgs-container .child .msgs .msg-wrapper .user .profile {
+        height: 35px;
+        width: 35px;
+    }
+
+    .chat-wrapper .child .recent .person .details a,
+    .chat-wrapper .child .recent .person .details .time span,
+    .chat-wrapper .msgs-container .child .box-header span,
+    .chat-wrapper .msgs-container .child .msgs .msg-wrapper .user .msg-details p,
+    .chat-wrapper .msgs-container .child .msgs .msg-wrapper .user .msg-details .attached a {
+        font-size: 0.70rem;
+    }
+
+    .chat-wrapper .msgs-container .child .msgs .msg-wrapper .user .msg-details p {
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .chat-wrapper .msgs-container {
+        margin-top: 20px;
+    }
+
+    .chat-wrapper .msgs-container .child .msgs .msg-wrapper {
+        width: 100%;
+    }
+
+    .chat-wrapper .msgs-container .child .msgs .msg-wrapper .user .msg-details .image {
+        height: 200px;
+        width: 200px;
+    }
+
+    .chat-wrapper .msgs-container .child .insert {
+        flex-direction: column;
+    }
+
+    .chat-wrapper .msgs-container .child .insert form {
+        width: 100%;
+        flex: 1;
+    }
+
+    .chat-wrapper .msgs-container .child .insert .inputs input[type="text"] {
+        font-size: 0.70rem;
+        flex: 1;
+        width: 70%;
+    }
+
+    .chat-wrapper .msgs-container .child .insert .inputs .files {
+        flex-direction: column;
+    }
+
+    .chat-wrapper .msgs-container .child .insert button {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .profile-settings .child .user-profile {
+        height: 160px;
+        width: 160px;
+    }
+
+    .profile-settings .margin-small-screen {
+        margin-top: 20px;
+    }
+
+    .profile-settings .child .user-lables {
+        padding: 0;
+    }
+
+    .profile-settings .child .user-lables .works .child {
+        height: 40vh;
+        margin-bottom: 30px;
+    }
+
+    .profile-settings .child .save {
+        margin-top: 40px;
+    }
+
+    .profile-settings .child .profile-bar .bar-head span {
+        font-size: 0.80rem;
+    }
+}

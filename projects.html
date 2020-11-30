@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/widgets.css">
+</head>
+
+<body>
+
+    <!--navigation bar-->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                شغف
+            </a>
+
+            <div id="wrapper" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="main-item menu">
+                    <span class="line line01"></span>
+                    <span class="line line02"></span>
+                    <span class="line line03"></span>
+                </div>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link hasBorder" id="about" href="#">
+                            <i class="far fa-search-plus"></i>
+                            تصفح المشاريع
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hasBorder" id="brands" href="#">
+                            <i class="far fa-cog"></i>
+                            كيف يعمل شغف
+                        </a>
+                    </li>
+
+                </ul>
+
+                <ul class="navbar-nav mr-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" id="nubia" href="login.html">
+                            <i class="far fa-sign-in-alt"></i>
+                            تسجيل الدخول
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link sign" id="nubia" href="login.html">
+                            <i class="far fa-edit"></i>
+                            نشر خدمه
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!--projects-->
+    <div class="projects text-righted">
+        <div class="container-fluid">
+
+            <div class="category">
+                <h4>
+                    البرمجه والتطوير
+                </h4>
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="far fa-calendar-alt"></i>
+                        الاحدث
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">الاقدم</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 parent">
+                    <div class="child projects-child">
+                        <div class="project-filter">
+                            <h6>
+                                كلمات مفتاحية
+                            </h6>
+
+                            <input type="search" name="" placeholder="ابحث بالاسم" id="">
+                            <div class="checkbox">
+                                <input type="checkbox" name="" id="checkbox">
+                                <label for="checkbox">
+                                    <span>
+                                        برمجه وتصميم
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox">
+                                <input type="checkbox" name="" id="checkbox2">
+                                <label for="checkbox2">
+                                    <span>
+                                        اداره مشاريع
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox">
+                                <input type="checkbox" name="" id="checkbox3">
+                                <label for="checkbox3">
+                                    <span>
+                                        التصميم والاعمال الابداعيه
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox">
+                                <input type="checkbox" name="" id="checkbox4">
+                                <label for="checkbox4">
+                                    <span>
+                                        التسجيل الصوتي
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox">
+                                <input type="checkbox" name="" id="checkbox5">
+                                <label for="checkbox5">
+                                    <span>
+                                        تصميم االهويه البصريه
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox">
+                                <input type="checkbox" name="" id="checkbox6">
+                                <label for="checkbox6">
+                                    <span>
+                                        تطبيقات الهاتف الذكي
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="ranger-slider">
+                                <div class="row">
+                                    <div class="Range col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                        <div id="slider-range"></div>
+                                    </div>
+                                </div>
+                                <div class="row slider-labels">
+                                    <div class="col-xs-6 text-right caption">
+                                        <strong>من</strong> <span id="slider-range-value2" class="getter"></span>
+                                    </div>
+
+                                    <div class="col-xs-6 caption">
+                                        <strong>
+                                            الي
+                                        </strong> <span id="slider-range-value1" class="getter"></span>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <form>
+                                            <input type="hidden" name="max-value" value="">
+                                            <input type="hidden" name="min-value" value="">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 project-list parent">
+                    <div class="child">
+                        <div class="project gen-wrapper">
+                            <div class="info">
+                                <div class="user-image">
+                                    <img src="img/avatar/hero.jpg" alt="">
+                                </div>
+
+                                <div class="details">
+                                    <a href="project-details.html">
+                                        هنا يكون اسم المشروع
+
+                                        <span class="project-status opened">
+                                            مفتوح
+                                        </span>
+                                    </a>
+
+                                    <div class="summary">
+                                        <p>
+                                            أضف تفاصيل مشروعك والمهارات المطلوبة لإنجازه وابدأ باستقبال عروض المستقلين
+                                            عليه. أضف تفاصيل مشروعك والمهارات
+                                        </p>
+                                    </div>
+                                    <div class="other">
+                                        <span>
+                                            <div class="i far fa-user"></div>
+                                            فلان الفلاني
+                                        </span>
+
+                                        <span>
+                                            <div class="i far fa-clock"></div>
+                                            منذ 20 دقيقه
+                                        </span>
+
+                                        <span>
+                                            <div class="i far fa-tasks"></div>
+                                            20 عرض
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="options">
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="far fa-cog"></i>
+                                        اضافه مشروع
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+
+                        <div class="project gen-wrapper">
+                            <div class="info">
+                                <div class="user-image">
+                                    <img src="img/avatar/hero.jpg" alt="">
+                                </div>
+
+                                <div class="details">
+                                    <a href="project-details.html">
+                                        هنا يكون اسم المشروع
+                                        <span class="project-status closed">
+                                            مغلق
+                                        </span>
+                                    </a>
+
+                                    <div class="summary">
+                                        <p>
+                                            أضف تفاصيل مشروعك والمهارات المطلوبة لإنجازه وابدأ باستقبال عروض المستقلين
+                                            عليه. أضف تفاصيل مشروعك والمهارات
+                                        </p>
+                                    </div>
+
+
+                                    <div class="other">
+                                        <span>
+                                            <div class="i far fa-user"></div>
+                                            فلان الفلاني
+                                        </span>
+
+                                        <span>
+                                            <div class="i far fa-clock"></div>
+                                            منذ 20 دقيقه
+                                        </span>
+
+                                        <span>
+                                            <div class="i far fa-tasks"></div>
+                                            20 عرض
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="options">
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="far fa-cog"></i>
+                                        اضافه مشروع
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+
+                        <div class="project gen-wrapper">
+                            <div class="info">
+                                <div class="user-image">
+                                    <img src="img/avatar/hero.jpg" alt="">
+                                </div>
+
+                                <div class="details">
+                                    <a href="project-details.html">
+                                        هنا يكون اسم المشروع
+                                        <span class="project-status on-progress">
+                                            قيد التنفيذ
+                                        </span>
+                                    </a>
+                                    <div class="summary">
+                                        <p>
+                                            أضف تفاصيل مشروعك والمهارات المطلوبة لإنجازه وابدأ باستقبال عروض المستقلين
+                                            عليه. أضف تفاصيل مشروعك والمهارات
+                                        </p>
+                                    </div>
+                                    <div class="other">
+                                        <span>
+                                            <div class="i far fa-user"></div>
+                                            فلان الفلاني
+                                        </span>
+
+                                        <span>
+                                            <div class="i far fa-clock"></div>
+                                            منذ 20 دقيقه
+                                        </span>
+
+                                        <span>
+                                            <div class="i far fa-tasks"></div>
+                                            20 عرض
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="options">
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="far fa-cog"></i>
+                                        اضافه مشروع
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+
+                        <!---->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--footer-->
+    <footer>
+        <div class="custom-container">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 text-righted">
+                    <h5>
+                        من نحن
+                    </h5>
+                    <ul>
+                        <li>
+                            <a href="faq.html">
+                                السمتقلين
+                            </a>
+                        </li>
+                        <li>
+                            <a href="privacy.html">
+                                المشاريع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy.html">
+                                المشاريع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy.html">
+                                المشاريع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy.html">
+                                المشاريع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy.html">
+                                شروط الاستخدام
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                    <h5>
+                        الروابط
+                    </h5>
+                    <ul>
+                        <li>
+                            <a href="faq.html">
+                                السمتقلين
+                            </a>
+                        </li>
+                        <li>
+                            <a href="privacy.html">
+                                المشاريع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy.html">
+                                المشاريع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy.html">
+                                المشاريع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy.html">
+                                المشاريع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy.html">
+                                شروط الاستخدام
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                    <h5>
+                        اتصل بنا
+                    </h5>
+                    <ul>
+                        <li>
+                            <a href="faq.html">
+                                السمتقلين
+                            </a>
+                        </li>
+                        <li>
+                            <a href="privacy.html">
+                                المشاريع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy.html">
+                                المشاريع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy.html">
+                                المشاريع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy.html">
+                                المشاريع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacy.html">
+                                شروط الاستخدام
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6 col-lg-12 col-xl-12">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 linker">
+                            <div class="d-flex">
+                                <span class="span-t">
+                                    تابعنا علي
+                                </span>
+                                <div class="d-flex">
+                                    <span class="social-icon">
+                                        <a href="">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </span>
+
+                                    <span class="social-icon">
+                                        <a href="">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </span>
+
+                                    <span class="social-icon">
+                                        <a href="">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </span>
+
+                                    <span class="social-icon">
+                                        <a href="">
+                                            <i class="fab fa-google"></i>
+                                        </a>
+                                    </span>
+
+                                    <span class="social-icon">
+                                        <a href="">
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 linker">
+                            <div class="d-flex">
+                                <span class="span-t">
+                                    حمل التطبيق
+                                </span>
+                                <div class="d-flex">
+                                    <span class="social-icon">
+                                        <a href="">
+                                            <i class="fab fa-apple"></i>
+                                        </a>
+                                    </span>
+
+                                    <span class="social-icon">
+                                        <a href="">
+                                            <i class="fab fa-android"></i>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyRights text-center">
+                <p>
+                    <script>
+                        document.write(new Date().getFullYear());
+                    </script>
+                    &copf;
+                    جميع الحقوق محفوظة شغف
+                </p>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <!--scripts sources-->
+    <script src=" js/jquery.js"> </script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/rangeSlider.js"></script>
+</body>
+
+</html>

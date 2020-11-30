@@ -1,0 +1,1332 @@
+/* import font */
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap");
+@font-face {
+    font-family: DroidArabicKufi;
+    src: url('../webfonts/DroidArabicKufi.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: DroidArabicKufi;
+    src: url('../webfonts/DroidKufiRegular.ttf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: DroidArabicKufi;
+    src: url('../webfonts/DroidArabicKufiBold.ttf');
+    font-weight: 700;
+}
+
+
+/* variables and defaul css */
+
+:root {
+    --primary: #00AFA9;
+    --opacity: #02dad38c;
+    --accent: #00FCF3;
+    --whitesmoke: rgb(247, 247, 247);
+    --lightgrey: rgba(250, 250, 250, 0.705);
+    --secondary: #169bf4;
+    --secondaryhover: #046baf;
+    --hover: #158885;
+    --pink: rgb(255, 97, 189);
+    --white: #fff;
+    --transition: .3s ease-in-out;
+    --padding: 100px 0;
+}
+
+body,
+html {
+    font-family: DroidArabicKufi;
+    overflow-x: hidden;
+    direction: rtl;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+button,
+input {
+    outline: none !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+.custom-container {
+    width: 85%;
+    margin: auto;
+}
+
+.text-righted {
+    text-align: right;
+}
+
+.dropdown-menu a.dropdown-item {
+    color: #000;
+}
+
+
+/* filter */
+
+.my-projects .filter .row .input label {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 700;
+}
+
+.my-projects .filter .row .input {
+    margin-bottom: 20px;
+}
+
+.my-projects .filter .row .input input,
+.my-projects .filter .row .input select {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid lightgrey;
+    border-radius: 3px;
+    font-size: 0.88rem;
+    transition: var(--transition);
+}
+
+.my-projects .filter .row .input input:focus,
+.my-projects .filter .row .input select:focus {
+    border-color: var(--primary);
+}
+
+.my-projects .filter .row .input select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    width: 100%;
+    background: url("../img/icons/arrow-angle-pointing-down.svg") no-repeat 10px center;
+    background-size: 10px;
+    background-color: white;
+    cursor: pointer;
+    color: grey;
+    padding-left: 20px;
+    outline: none;
+}
+
+
+/* projects */
+
+.projects {
+    background-color: var(--lightgrey);
+    padding: 20px 20px 100px 20px;
+}
+
+.projects .category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.projects .category h4 {
+    font-weight: 700;
+    font-size: 1.4em;
+    padding: 0;
+    margin: 0;
+}
+
+.projects .category button {
+    background-color: whitesmoke;
+    font-size: 0.88rem;
+}
+
+.projects .parent {
+    padding: 20px 0;
+}
+
+.projects .parent .projects-child {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.projects .parent .child .project-filter h6 {
+    font-weight: 600;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.projects .parent .child .project-filter input[type="search"] {
+    padding: 10px;
+    border: 2px solid whitesmoke;
+    font-size: 0.88rem;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.projects .parent .child .project-filter .checkbox label {
+    font-size: 0.88rem;
+    display: inline-block;
+}
+
+.projects .parent .child .project-filter .checkbox input {
+    margin-top: 10px;
+}
+
+.projects .parent .child .project-filter .choose-rate .fa-star {
+    color: grey;
+    transition: var(--transition);
+}
+
+.projects .parent .child .project-filter .choose-rate .fa-star:hover {
+    color: rgb(250, 172, 27);
+}
+
+.projects .parent .child .project-filter span {
+    display: inline-block;
+    margin-right: 6px;
+}
+
+
+/* range slider */
+
+.Range {
+    margin-top: 20px;
+    position: relative;
+    direction: rtl;
+}
+
+.noUi-target,
+.noUi-target * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -ms-touch-action: none;
+    touch-action: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.noUi-target {
+    position: relative;
+    direction: ltr;
+}
+
+.noUi-base {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.noUi-origin {
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.noUi-handle {
+    position: relative;
+    z-index: 1;
+}
+
+.noUi-stacking .noUi-handle {
+    /* This class is applied to the lower origin when
+     its values is > 50%. */
+    z-index: 10;
+}
+
+.noUi-state-tap .noUi-origin {
+    -webkit-transition: left 0.3s, top .3s;
+    transition: left 0.3s, top .3s;
+}
+
+.noUi-state-drag * {
+    cursor: inherit !important;
+}
+
+
+/* Painting and performance;
+   * Browsers can paint handles in their own layer.
+   */
+
+.noUi-base,
+.noUi-handle {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.caption {
+    padding: 20px 20px;
+}
+
+.getter {
+    color: rgb(58, 58, 58);
+    background-color: var(--white);
+    font-size: 0.80rem;
+    font-family: Poppins;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+
+/* Slider size and handle placement;
+   */
+
+.noUi-horizontal {
+    height: 4px;
+}
+
+.noUi-horizontal .noUi-handle {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    left: -7px;
+    font-size: 0.80rem;
+    top: -7px;
+    background-color: var(--primary);
+}
+
+.noUi-background {
+    background: rgb(255, 255, 255);
+}
+
+.noUi-connect {
+    background: var(--primary);
+    -webkit-transition: background 450ms;
+    transition: background 450ms;
+}
+
+.noUi-origin {
+    border-radius: 2px;
+}
+
+.noUi-target {
+    border-radius: 2px;
+}
+
+
+/* Handles and cursors;
+   */
+
+.noUi-draggable {
+    cursor: w-resize;
+}
+
+.noUi-vertical .noUi-draggable {
+    cursor: n-resize;
+}
+
+.noUi-handle {
+    cursor: default;
+    -webkit-box-sizing: content-box !important;
+    -moz-box-sizing: content-box !important;
+    box-sizing: content-box !important;
+}
+
+.noUi-handle:active {
+    border: 8px solid #345DBB;
+    border: 8px solid rgba(53, 93, 187, 0.38);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    left: -14px;
+    top: -14px;
+}
+
+[disabled].noUi-connect,
+[disabled] .noUi-connect {
+    background: #B8B8B8;
+}
+
+[disabled].noUi-origin,
+[disabled] .noUi-handle {
+    cursor: not-allowed;
+}
+
+
+/* project-list */
+
+.projects .project-list {
+    padding-left: 18px;
+}
+
+.project-details .row {
+    margin-top: 10px;
+}
+
+.projects .project-list .child {
+    background-color: var(--white);
+    padding: 20px;
+    width: 96%;
+    border-radius: 10px;
+    margin-right: auto;
+}
+
+.projects .project-list .child .gen-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid whitesmoke;
+    margin-bottom: 20px;
+    transition: var(--transition);
+    padding: 10px 10px 20px 10px;
+}
+
+.projects .project-list .child .gen-wrapper:last-child {
+    border-bottom: none;
+}
+
+.projects .project-list .child .gen-wrapper:hover {
+    background-color: var(--lightgrey);
+}
+
+.projects .project-list .child .gen-wrapper .info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.projects .project-list .child .gen-wrapper .info a {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 0.88rem;
+    color: #000;
+}
+
+.projects .project-list .child .gen-wrapper .info .other {
+    padding-right: 0
+}
+
+.projects .project-list .child .gen-wrapper .info .user-image {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 20px;
+    flex-shrink: 0;
+}
+
+.projects .project-list .child .gen-wrapper .info .user-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.projects .project-list .child .gen-wrapper .info .details {
+    margin-top: 10px;
+    flex-shrink: none;
+}
+
+.projects .project-list .child .gen-wrapper .info .details a {
+    text-decoration: none;
+}
+
+.projects .project-list .child .gen-wrapper .info .details .project-status {
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.70rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.projects .project-list .child .gen-wrapper .info .details .project-status.closed {
+    background-color: rgb(255, 145, 0);
+}
+
+.projects .project-list .child .gen-wrapper .info .details .project-status.opened {
+    background-color: #04DDA7;
+}
+
+.projects .project-list .child .gen-wrapper .info .details .project-status.on-progress {
+    background-color: #169BF4;
+}
+
+.projects .project-list .child .gen-wrapper .info .details .summary p {
+    font-size: 0.80rem;
+    margin-top: 10px;
+    width: 90%;
+    margin-bottom: 10px;
+    padding-bottom: 0;
+}
+
+.projects .project-list .child .gen-wrapper .info .other span {
+    font-size: 0.80rem;
+    margin-left: 12px;
+    font-weight: 600;
+    color: rgb(77, 77, 77);
+}
+
+.projects .project-list .child .gen-wrapper .info .other span.value {
+    margin-left: 0;
+}
+
+.projects .project-list .child .gen-wrapper .info .other span i {
+    margin-left: 8px;
+}
+
+.projects .project-list .child .gen-wrapper .info .other span .fa-star {
+    color: rgb(250, 172, 27);
+}
+
+.projects .project-list .child .gen-wrapper .options button {
+    background-color: whitesmoke;
+    font-size: 0.88rem;
+    border-radius: 5px;
+}
+
+.projects .project-list .child .gen-wrapper .options .dropdown-menu a.dropdown-item {
+    color: #000;
+}
+
+
+/* project details page */
+
+.project-details {
+    width: 100%;
+    background-color: var(--lightgrey);
+    position: relative;
+    padding: 0 20px;
+}
+
+.project-details .name {
+    padding: 20px 0;
+}
+
+.project-details .name .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    padding: 20px 0;
+}
+
+.project-details .name .wrap h4 {
+    font-size: 1.4em;
+    font-weight: 700;
+}
+
+.project-details .name .wrap .tag {
+    background-color: rgb(255, 145, 0);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.70rem;
+    color: rgb(255, 255, 255);
+}
+
+.project-details .name .wrap .details a,
+.project-details .name .wrap .details span {
+    font-size: 0.80rem;
+}
+
+.project-details .name .wrap .details span {
+    margin-right: 10px;
+    color: grey;
+}
+
+.project-details .name .wrap .add button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.88rem;
+    transition: var(--transition);
+}
+
+.project-details .name .wrap .add button:hover {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.project-details .row {
+    padding: 0 0 100px 0;
+}
+
+.project-details .child {
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.project-details .row .child .steps {
+    position: relative;
+}
+
+.project-details .row .child .steps {
+    position: relative;
+}
+
+.project-details .row .child .steps .steps-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.project-details .row .child .steps .steps-grid div {
+    font-size: 0.88rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex: 1;
+    color: grey;
+}
+
+.project-details .row .child .steps .steps-grid div.ongoing {
+    color: #000;
+    font-weight: 700;
+}
+
+.project-details .row .child .steps .steps-grid div i {
+    margin-left: 8px;
+}
+
+.project-details .row .child .steps .steps-grid div span {
+    position: absolute;
+    width: 100%;
+    bottom: -34px;
+    right: 0;
+    border-bottom: 4px solid lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-details .row .child .steps .steps-grid div span.active {
+    border-bottom: 4px solid var(--primary);
+    z-index: 1;
+}
+
+.project-details .row .child .steps .steps-grid div span::after {
+    content: "";
+    position: absolute;
+    bottom: -11px;
+    height: 20px;
+    width: 20px;
+    border: 4px solid lightgrey;
+    border-radius: 50%;
+    background-color: var(--whitesmoke);
+}
+
+.project-details .row .child .steps .steps-grid div span.active::after {
+    border: 4px solid var(--primary);
+    background-color: var(--hover);
+}
+
+.project-details .row .child .steps .step-line {
+    border-bottom: 4px solid whitesmoke;
+    width: 100%;
+}
+
+
+/* projects details */
+
+.project-details .child h6 {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid whitesmoke;
+}
+
+.project-details .child .desc p {
+    font-size: 0.88rem;
+    padding: 10px 0 0 0;
+}
+
+
+/* projects skills */
+
+.project-details .child .tags {
+    padding-top: 10px;
+}
+
+
+/* add offer */
+
+.project-details .child textarea,
+.project-details .child input {
+    width: 100%;
+    height: 120px;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 0.88rem;
+    border: 2px solid whitesmoke;
+    resize: none;
+    outline: none;
+    margin-top: 10px;
+    transition: var(--transition);
+}
+
+.project-details .child select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    width: 100%;
+    background: url('../../assets/img/icons/arrow-angle-pointing-down.svg') no-repeat 10px center;
+    background-size: 10px;
+    background-color: white;
+    cursor: pointer;
+    color: grey;
+    padding-left: 20px;
+    outline: none;
+}
+
+.vs--searchable .vs__dropdown-toggle {
+    border: 0;
+}
+
+.project-details .child .d-flex {
+    justify-content: space-between;
+}
+
+.project-details .child input {
+    height: auto;
+    width: 49%;
+}
+
+.project-details .child textarea:hover,
+.project-details .child textarea:focus {
+    border-color: var(--primary);
+}
+
+.project-details .child button.add-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--primary);
+    color: var(--white);
+    display: block;
+    border-radius: 5px;
+    transition: var(--transition);
+    margin-right: auto;
+    margin-top: 10px;
+    font-size: 0.88rem;
+}
+
+.project-details .child button.add-button:hover {
+    background-color: var(--hover);
+}
+
+
+/* skills and tags */
+
+.project-details .child .tags .tag {
+    font-size: 0.80rem;
+    padding: 5px 10px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    margin-left: 0;
+    background-color: var(--lightgrey);
+    display: inline-block;
+    font-family: Poppins;
+    margin-bottom: 6px;
+    margin-left: 6px;
+}
+
+
+/* offers */
+
+.project-details .child .offer-card {
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid whitesmoke;
+}
+
+.project-details .child .offer-card:last-child {
+    border-bottom: none;
+}
+
+.project-details .child .offer-card .upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-details .child .offer-card .upper .options button {
+    background-color: whitesmoke;
+    font-size: 0.88rem;
+    padding: 10px;
+}
+
+.project-details .child .offer-card .user {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.project-details .child .offer-card .user .profile {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    flex-shrink: none;
+    overflow: hidden;
+}
+
+.project-details .child .offer-card .user .profile img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.project-details .child .offer-card .user .user-info {
+    margin-right: 20px;
+    flex-shrink: none;
+}
+
+.project-details .child .offer-card .user .user-info a {
+    font-size: 0.88rem;
+    font-weight: 700;
+}
+
+.project-details .child .offer-card .user .user-info .rate i {
+    font-size: 0.80rem;
+    color: #FAAC1B;
+    margin: 0;
+    padding: 0;
+}
+
+.project-details .child .offer-card .user .user-info .d-flex span {
+    font-size: 0.88rem;
+}
+
+.project-details .child .offer-card .user .user-info .d-flex span i {
+    margin-left: 4px;
+}
+
+.project-details .child .offer-card .user .user-info .d-flex span.job {
+    margin-right: 12px;
+}
+
+.project-details .child .offer-card .offer-body {
+    margin-top: 20px;
+}
+
+.project-details .child .offer-card .offer-body p {
+    font-size: 0.88rem;
+}
+
+
+/* prject owner card and sharing*/
+
+.project-details .owner-card .row {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.project-details .owner-card .child p {
+    font-weight: 700;
+    font-size: 0.88rem;
+}
+
+.project-details .owner-card .child .share {
+    background-color: var(--lightgrey);
+    padding: 5px 10px 10px 10px;
+    width: 100%;
+    margin: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.project-details .owner-card .child .share span {
+    font-size: 0.80rem;
+}
+
+.project-details .owner-card .child .share .socials {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.project-details .owner-card .child .share .share-title {
+    margin-top: 8px;
+    font-weight: 700;
+    display: inline-block;
+    margin-top: 6px;
+}
+
+.project-details .owner-card .child .share .socials span {
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    margin-left: 4px;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.project-details .owner-card .child .share .socials span a {
+    text-decoration: none;
+}
+
+.project-details .owner-card .child .share .socials span:hover {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.project-details .owner-card .child .share .socials span:hover a {
+    color: var(--white);
+}
+
+.project-details .owner-card .child p.grey {
+    font-weight: 600;
+}
+
+.project-details .owner-card .child .state p {
+    font-size: 0.80rem;
+    color: var(--white);
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: #FF9100;
+    display: inline;
+    font-weight: 700;
+}
+
+.project-details .owner-card .child .owner .profile {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.project-details .owner-card .child h6.has-margin {
+    margin-top: 40px;
+}
+
+.project-details .owner-card .child .owner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-shrink: none;
+}
+
+.project-details .owner-card .child .owner .profile img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.project-details .owner-card .child .owner .info {
+    margin-right: 20px;
+    flex-shrink: none;
+}
+
+.project-details .owner-card .child .owner .info a {
+    display: block;
+    font-weight: 700;
+    font-size: 0.88rem;
+}
+
+.project-details .owner-card .child .owner .info span {
+    color: grey;
+    font-size: 0.80rem;
+    display: block;
+    margin-top: 4px;
+}
+
+
+/* add project */
+
+.add-project,
+.my-projects {
+    background-color: whitesmoke;
+    padding: 0 0 40px 0;
+}
+
+.title-space {
+    padding: 40px 0 10px 0;
+}
+
+.project-title .title-space h4 {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.my-projects .child,
+.add-project .child {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.my-projects .child {
+    margin-bottom: 20px;
+}
+
+.my-projects .child.project-item .price.name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.my-projects .child.project-item .name a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1em;
+}
+
+.my-projects .child.project-item .name .status {
+    background-color: #FF9100;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.80rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+}
+
+.my-projects .child.project-item .name .status.on-progress {
+    background-color: #169bf4;
+}
+
+.my-projects .child.project-item .name .status.opened {
+    background-color: #04dda7;
+}
+
+.my-projects .child.project-item .price .project-price {
+    font-weight: 700;
+    background-color: whitesmoke;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.80rem;
+}
+
+.my-projects .child.project-item .price .project-price span {
+    font-family: Poppins;
+}
+
+.my-projects .child.project-item .owner .profile {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.add-project .add .input {
+    margin-bottom: 20px;
+}
+
+.my-projects .child.project-item .owner {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.my-projects .child.project-item .owner a {
+    font-weight: 700;
+    text-decoration: none;
+    color: #000;
+    font-size: 0.80rem;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.my-projects .child.project-item .owner .profile img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.my-projects .child.project-item .project-desc p {
+    color: grey;
+    font-size: 0.88rem;
+    margin-top: 20px;
+}
+
+.add-project .add .input label {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 700;
+}
+
+.add-project .add .input label.file {
+    padding: 10px;
+    border: 1px dashed lightgrey;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.80rem;
+    transition: var(--transition);
+}
+
+.add-project .add .input label.file i {
+    background-color: lightgrey;
+    padding: 10px;
+    border-radius: 4px;
+    margin-left: 8px;
+}
+
+.add-project .add .input label.file:hover {
+    background-color: whitesmoke;
+}
+
+.add-project .add .input input,
+.add-project .add .input textarea,
+.add-project .add .input select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    border: 2px solid rgb(214, 214, 214);
+    transition: var(--transition);
+    outline: none;
+    font-size: 0.88rem;
+}
+
+.add-project .add .input select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    width: 100%;
+    background: url("../img/icons/arrow-angle-pointing-down.svg") no-repeat 10px center;
+    background-size: 10px;
+    background-color: white;
+    cursor: pointer;
+    color: grey;
+    padding-left: 20px;
+    outline: none;
+}
+
+.add-project .add .input textarea {
+    height: 120px;
+    resize: none;
+}
+
+.add-project .add .input input:focus,
+.add-project .add .input textarea:focus,
+.add-project .add .input select:focus {
+    border-color: var(--primary);
+}
+
+.add-project .add input[type="file"] {
+    display: none;
+}
+
+.add-project .add button {
+    padding: 15px 20px;
+    background-color: var(--primary);
+    color: var(--white);
+    font-size: 0.88rem;
+    border-radius: 5px;
+    transition: var(--transition);
+    border: none;
+    display: block;
+    margin-right: auto;
+}
+
+.add-project .add button:hover {
+    background-color: var(--hover);
+}
+
+.add-project .child h6 {
+    font-weight: 700;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid lightgrey;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.add-project .child p {
+    font-size: 0.88rem;
+    color: rgb(100, 100, 100);
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+
+/* media query */
+
+@media(max-width: 1000px) {
+    h2.title {
+        font-size: 1.2em;
+    }
+    .add-project .add .input labe,
+    .filter .row .input label {
+        font-size: 0.80rem;
+    }
+    .my-projects .col-12 {
+        padding: 0;
+        margin: 0;
+    }
+    .my-projects .child,
+    .add-project .child {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    .my-projects .child {
+        padding: 20px;
+        width: 95%;
+        margin: auto auto 20px auto;
+    }
+    .my-projects .child.project-item .price.name {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .my-projects .child.project-item .price .project-price {
+        display: block;
+        margin-top: 10px;
+    }
+    .my-projects .child.project-item .name a {
+        font-size: 0.88rem;
+    }
+    .filter .row .input {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    .show-first {
+        order: 1;
+    }
+    .show-second {
+        order: 2;
+    }
+    .projects .category h4 {
+        font-size: 1em;
+    }
+    .projects .parent .child .project-filter .checkbox label {
+        font-size: 0.80rem;
+    }
+    .projects .project-list {
+        padding: 0;
+    }
+    .projects .project-list .child {
+        width: 100%;
+        position: relative;
+    }
+    .projects .project-list .child .gen-wrapper .info .other span {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .projects .project-list .child .gen-wrapper .info .other span:last-child {
+        margin-bottom: 0;
+    }
+    .projects .project-list .child {
+        padding: 20px 15px;
+    }
+    .projects .project-list .child .gen-wrapper .info {
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        position: relative;
+    }
+    .projects .project-list .child .gen-wrapper .info .user-image {
+        margin-bottom: 10px;
+    }
+    .projects .project-list .child .gen-wrapper .info a,
+    .projects .project-list .child .gen-wrapper .options button {
+        font-size: 0.80rem;
+    }
+    .projects .project-list .child .gen-wrapper .options button {
+        padding: 8px;
+    }
+    .project-details {
+        padding: 0;
+    }
+    .add-project .add button {
+        margin: auto;
+        width: 100%;
+    }
+    .project-details .name .wrap h4 {
+        font-size: 0.90rem;
+        width: 90%;
+    }
+    .project-details .name .wrap .tag {
+        display: inline-block;
+    }
+    .project-details .name .wrap .details a {
+        margin-bottom: 5px;
+        display: block;
+    }
+    .project-details .name .wrap .details span {
+        margin-right: 0;
+    }
+    .project-details .name .wrap .add button,
+    .project-details .name .wrap .details a,
+    .project-details .name .wrap .details span,
+    .project-details .owner-card .child .state p,
+    .project-details .owner-card .child .owner .info a,
+    .project-details .owner-card .child .owner .info span {
+        font-size: 0.75rem;
+    }
+    .project-details .row .child .steps .steps-grid div {
+        font-size: 0.70rem;
+    }
+    .project-details .child h6 {
+        font-size: 1em;
+    }
+    .project-details .child .desc p,
+    .project-details .child textarea,
+    .project-details .child button.add-button,
+    .project-details .child .offer-card .offer-body p {
+        font-size: 0.80rem;
+    }
+    .project-details .child .offer-card .user {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .project-details .child .offer-card .user .user-info {
+        margin-right: 0;
+    }
+    .project-details .child .tags .tag,
+    .project-details .child .offer-card .user .user-info a {
+        font-size: 0.75rem;
+    }
+    .project-details .child .offer-card .user .profile {
+        height: 40px;
+        width: 40px;
+    }
+    .project-details .child .offer-card .user .profile {
+        flex-shrink: 0;
+    }
+    .career.d-flex {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .project-details .child .offer-card .user .user-info .d-flex span {
+        display: block;
+        margin: 0;
+        font-size: 0.75rem;
+    }
+    .project-details .child .offer-card .user .user-info .d-flex span.job {
+        margin-right: 0;
+        margin-top: 5px;
+    }
+    .project-details .child .offer-card .upper .options button {
+        font-size: 0.75rem;
+    }
+    .project-details .owner-card .child p {
+        font-size: 0.80rem;
+    }
+    .project-details .owner-card .child .owner .profile {
+        height: 40px;
+        width: 40px;
+    }
+    .project-details .child .d-flex {
+        flex-direction: column;
+    }
+    .project-details .child .d-flex input,
+    .project-details .child .d-flex select {
+        width: 100%;
+    }
+}

@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/widgets.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+    <!--user nav-->
+    <nav class="navbar user-nav navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                شغف
+            </a>
+
+            <div id="wrapper" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="main-item menu">
+                    <span class="line line01"></span>
+                    <span class="line line02"></span>
+                    <span class="line line03"></span>
+                </div>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link hasBorder" id="" href="projects.html">
+                            <i class="far fa-search-plus"></i>
+                            تصفح المشاريع
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hasBorder" id="brands" href="#">
+                            <i class="far fa-cog"></i>
+                            كيف يعمل شغف
+                        </a>
+                    </li>
+                </ul class="navbar-nav mr-auto">
+
+                <div class="admin">
+                    <ul>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="far fa-bell"></i>
+                                <span class="getter">
+                                    3
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-left  animate slideIn"
+                                aria-labelledby="navbarDropdown">
+                                <div class="title">
+                                    <span>
+                                        لديك 3 طلبات
+
+                                    </span>
+                                </div>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="far fa-envelope"></i>
+                                <span class="getter">
+                                    5
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-left animate slideIn"
+                                aria-labelledby="navbarDropdown">
+                                <div class="title">
+                                    <span>
+                                        لديك 3 اشعارات
+                                    </span>
+                                </div>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="profile">
+                                    <img src="img/avatar/hero.jpg" alt="" />
+                                </div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-left animate slideIn"
+                                aria-labelledby="navbarDropdown">
+                                <div class="title">
+                                    <span>
+                                        فلان الفلاني
+                                    </span>
+                                </div>
+                                <a class="dropdown-item" href="#">
+                                    <i class="far fa-user"></i> الصفحة الشخصية
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="far fa-cog"></i> الضبط
+                                </a>
+                                <a class="dropdown-item" href="balance.html">
+                                    <i class="far fa-money-bill"></i> الرصيد
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="far fa-sign-out"></i> الخروج
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--dashboard-->
+    <div class="dashboard-wrapper text-righted">
+        <div class="sidebar">
+            <div class="avatar">
+                <div class="profile">
+                    <img src="img/avatar/hero.jpg" alt="">
+                </div>
+
+                <h6>
+                    فلان الفلاني
+                </h6>
+                <div class="sidebar-links">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <i class="far fa-chart-line"></i>
+                                الاحصائيات
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="">
+                                <i class="far fa-tasks"></i>
+                                المشاريع
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--content-->
+        <div class="content">
+            <button class="sidebar-toggle" id="sidebar-toggler">
+                <i class="far fa-bars"></i>
+            </button>
+
+            <div class="parent">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
+                        <div class="child">
+                            <div class="d-flex">
+                                <div class="icon">
+                                    <i class="far fa-tasks"></i>
+                                </div>
+
+                                <span>
+                                    المشاريع المكتمله
+                                </span>
+                            </div>
+
+                            <div class="block-details d-flex">
+                                <h4>
+                                    145
+                                </h4>
+
+                                <span class="indicator">
+                                    <i class="far fa-angle-up"></i>
+                                    16%
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
+                        <div class="child">
+                            <div class="d-flex">
+                                <div class="icon">
+                                    <i class="far fa-money-bill"></i>
+                                </div>
+
+                                <span>
+                                    الارباح المكتسبه
+                                </span>
+                            </div>
+
+                            <div class="block-details d-flex">
+                                <h4>
+                                    $1443.55
+                                </h4>
+
+                                <span class="indicator down">
+                                    <i class="far fa-angle-down"></i>
+                                    12%
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
+                        <div class="child">
+                            <div class="d-flex">
+                                <div class="icon">
+                                    <i class="far fa-users"></i>
+                                </div>
+
+                                <span>
+                                    تقييم العملاء
+                                </span>
+                            </div>
+
+                            <div class="block-details d-flex">
+                                <h4>
+                                    87%
+                                </h4>
+
+                                <span class="indicator up">
+                                    <i class="far fa-angle-up"></i>
+                                    13%
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
+                        <div class="child">
+                            <div class="d-flex">
+                                <div class="icon">
+                                    <i class="far fa-chart-pie"></i>
+                                </div>
+
+                                <span>
+                                    خيارات اخري
+                                </span>
+                            </div>
+
+                            <div class="block-details d-flex">
+                                <h4>
+                                    145
+                                </h4>
+
+                                <span class="indicator down">
+                                    <i class="far fa-angle-down"></i>
+                                    10%
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+                </div>
+
+
+                <!--blocks projects , offers , balanace-->
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 blocks-container" style="padding: 10px;">
+                    <div class="white projects">
+                        <div class="dash-title">
+                            <h4>
+                                الرصيد
+                            </h4>
+
+                            <a href="balance.html">
+                                رؤيه المزيد
+                            </a>
+                        </div>
+
+
+                        <div class="block-child-wrap">
+
+                            <div class="row text-center">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 parent">
+                                    <div class="child">
+                                        <div class="balance-icon m-auto">
+                                            <i class="far fa-money-bill"></i>
+                                        </div>
+                                        <h6 class="balance-t">
+                                            الرصيد الكلي
+                                        </h6>
+                                        <p class="balance-p">
+                                            11.21265$
+                                        </p>
+                                    </div>
+                                </div>
+                                <!---->
+
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 parent">
+                                    <div class="child">
+                                        <div class="balance-icon m-auto">
+                                            <i class="far fa-wallet"></i>
+                                        </div>
+                                        <h6 class="balance-t">
+                                            الرصيد الكلي
+                                        </h6>
+                                        <p class="balance-p">
+                                            11.21265$
+                                        </p>
+                                    </div>
+                                </div>
+                                <!---->
+
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 parent">
+                                    <div class="child">
+                                        <div class="balance-icon m-auto">
+                                            <i class="far fa-money-check"></i>
+                                        </div>
+                                        <h6 class="balance-t">
+                                            الرصيد الكلي
+                                        </h6>
+                                        <p class="balance-p">
+                                            11.21265$
+                                        </p>
+                                    </div>
+                                </div>
+                                <!---->
+
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 parent">
+                                    <div class="child">
+                                        <div class="balance-icon m-auto">
+                                            <i class="far fa-credit-card"></i>
+                                        </div>
+                                        <h6 class="balance-t">
+                                            الرصيد الكلي
+                                        </h6>
+                                        <p class="balance-p">
+                                            11.21265$
+                                        </p>
+                                    </div>
+                                </div>
+                                <!---->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--projects-->
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 blocks-container" style="padding: 10px;">
+                    <div class="white projects">
+                        <div class="dash-title">
+                            <h4>
+                                المشاريع
+                            </h4>
+
+                            <a href="projects.html">
+                                رؤيه المزيد
+                            </a>
+                        </div>
+
+
+                        <div class="block-child-wrap">
+
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-3">
+                                    <div class="indic">
+                                        <div class="icon">
+                                            <i class="far fa-tasks"></i>
+                                        </div>
+
+                                        <p>
+                                            المشاريع الجديده
+                                        </p>
+                                        <h4>12</h4>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-9">
+                                    <div class="dash-gen-wrapper">
+                                        <div class="info">
+                                            <div class="user-image">
+                                                <img src="img/avatar/hero.jpg" alt="">
+                                            </div>
+
+                                            <div class="details">
+                                                <a href="project-details.html">
+                                                    هنا يكون اسم المشروع
+                                                    <span class="project-status closed">
+                                                        مغلق
+                                                    </span>
+                                                </a>
+
+                                                <div class="other">
+                                                    <span>
+                                                        <div class="i far fa-user"></div>
+                                                        فلان الفلاني
+                                                    </span>
+
+                                                    <span>
+                                                        <div class="i far fa-clock"></div>
+                                                        منذ 20 دقيقه
+                                                    </span>
+
+                                                    <span>
+                                                        <div class="i far fa-tasks"></div>
+                                                        20 عرض
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!---->
+
+                                    <div class="dash-gen-wrapper">
+                                        <div class="info">
+                                            <div class="user-image">
+                                                <img src="img/avatar/hero.jpg" alt="">
+                                            </div>
+
+                                            <div class="details">
+                                                <a href="project-details.html">
+                                                    هنا يكون اسم المشروع
+                                                    <span class="project-status opened">
+                                                        مفتوح
+                                                    </span>
+                                                </a>
+
+                                                <div class=" other">
+                                                    <span>
+                                                        <div class="i far fa-user"></div>
+                                                        فلان الفلاني
+                                                    </span>
+
+                                                    <span>
+                                                        <div class="i far fa-clock"></div>
+                                                        منذ 20 دقيقه
+                                                    </span>
+
+                                                    <span>
+                                                        <div class="i far fa-tasks"></div>
+                                                        20 عرض
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!---->
+
+                                    <div class="dash-gen-wrapper">
+                                        <div class="info">
+                                            <div class="user-image">
+                                                <img src="img/avatar/hero.jpg" alt="">
+                                            </div>
+
+                                            <div class="details">
+                                                <a href="project-details.html">
+                                                    هنا يكون اسم المشروع
+                                                    <span class="project-status on-progress">
+                                                        قيد التنقيذ
+                                                    </span>
+                                                </a>
+
+                                                <div class="other">
+                                                    <span>
+                                                        <div class="i far fa-user"></div>
+                                                        فلان الفلاني
+                                                    </span>
+
+                                                    <span>
+                                                        <div class="i far fa-clock"></div>
+                                                        منذ 20 دقيقه
+                                                    </span>
+
+                                                    <span>
+                                                        <div class="i far fa-tasks"></div>
+                                                        20 عرض
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!---->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 blocks-container" style="padding: 10px;">
+                    <div class="white projects">
+                        <div class="dash-title">
+                            <h4>
+                                الرسائل
+                            </h4>
+
+                            <a href="messages.html">
+                                رؤيه المزيد
+                            </a>
+                        </div>
+
+
+                        <div class="block-child-wrap">
+
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-3">
+                                    <div class="indic">
+                                        <div class="icon">
+                                            <i class="far fa-envelope"></i>
+                                        </div>
+
+                                        <p>
+                                            الرسائل الجديده
+                                        </p>
+                                        <h4>22</h4>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-9">
+                                    <div class="dash-gen-wrapper">
+                                        <div class="info">
+                                            <div class="user-image">
+                                                <img src="img/avatar/hero.jpg" alt="">
+                                            </div>
+
+                                            <div class="details">
+                                                <a href="project-details.html">
+                                                    فلان الفلاني
+
+                                                </a>
+
+                                                <div class="other">
+                                                    <p>
+                                                        الان مع شغف انجز مشاريعك عبر الانترنت بكل سهوله الان مع شغف انجز
+                                                        مشاريعك عبر
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!---->
+
+                                    <div class="dash-gen-wrapper">
+                                        <div class="info">
+                                            <div class="user-image">
+                                                <img src="img/avatar/hero.jpg" alt="">
+                                            </div>
+
+                                            <div class="details">
+                                                <a href="project-details.html">
+                                                    فلان الفلاني
+
+                                                </a>
+
+                                                <div class="other">
+                                                    <p>
+                                                        الان مع شغف انجز مشاريعك عبر الانترنت بكل سهوله الان مع شغف انجز
+                                                        مشاريعك عبر
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!---->
+
+                                    <div class="dash-gen-wrapper">
+                                        <div class="info">
+                                            <div class="user-image">
+                                                <img src="img/avatar/hero.jpg" alt="">
+                                            </div>
+
+                                            <div class="details">
+                                                <a href="project-details.html">
+                                                    فلان الفلاني
+                                                </a>
+
+                                                <div class="other">
+                                                    <p>
+                                                        الان مع شغف انجز مشاريعك عبر الانترنت بكل سهوله الان مع شغف انجز
+                                                        مشاريعك عبر
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!---->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--blocks projects , offers , balanace-->
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 blocks-container" style="padding: 10px;">
+                    <div class="white projects">
+                        <div class="dash-title">
+                            <h4>
+                                العروض
+                            </h4>
+
+                            <a href="my-projects.html">
+                                رؤيه المزيد
+                            </a>
+                        </div>
+
+
+                        <div class="block-child-wrap">
+                            <div class="row">
+
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-3">
+
+                                    <div class="indic">
+                                        <div class="icon">
+                                            <i class="far fa-clipboard-check"></i>
+                                        </div>
+
+                                        <p>
+                                            العروض الجديده
+                                        </p>
+                                        <h4>22</h4>
+
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-9">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                        <div class=" the-project-item">
+                                            <div class="name price d-flex" style="justify-content: space-between;">
+                                                <div class="the-project-name">
+                                                    <a href="#">
+                                                        هنا يكون اسم المشروع
+                                                    </a>
+                                                    <span class="status opened">
+                                                        مفتوح
+                                                    </span>
+                                                </div>
+
+                                                <div class="the-project-price">
+                                                    <span>
+                                                        100
+                                                    </span>
+
+                                                    ريال
+                                                </div>
+                                            </div>
+                                            <div class="project-desc">
+                                                <p>
+                                                    الان مع شغف انجز مشاريعك عبر الانترنت بكل سهوله الان مع شغف انجز
+                                                    مشاريعك عبر
+                                                    الانترنت
+                                                    بكل سهوله الان مع شغف انجز مشاريعك عبر الانترنت بكل سهوله الان مع
+                                                    شغف انجز
+                                                    مشاريعك
+                                                    عبر
+                                                    الانترنت بكل سهوله
+
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!---->
+
+
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                        <div class=" the-project-item">
+                                            <div class="name price d-flex" style="justify-content: space-between;">
+                                                <div class="the-project-name">
+                                                    <a href="#">
+                                                        هنا يكون اسم المشروع
+                                                    </a>
+                                                    <span class="status closed">
+                                                        مغلق
+                                                    </span>
+                                                </div>
+
+                                                <div class="the-project-price">
+                                                    <span>
+                                                        100
+                                                    </span>
+
+                                                    ريال
+                                                </div>
+                                            </div>
+                                            <div class="project-desc">
+                                                <p>
+                                                    الان مع شغف انجز مشاريعك عبر الانترنت بكل سهوله الان مع شغف انجز
+                                                    مشاريعك عبر
+                                                    الانترنت
+                                                    بكل سهوله الان مع شغف انجز مشاريعك عبر الانترنت بكل سهوله الان مع
+                                                    شغف انجز
+                                                    مشاريعك
+                                                    عبر
+                                                    الانترنت بكل سهوله
+
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!---->
+
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                        <div class=" the-project-item">
+                                            <div class="name price d-flex" style="justify-content: space-between;">
+                                                <div class="the-project-name">
+                                                    <a href="#">
+                                                        هنا يكون اسم المشروع
+                                                    </a>
+                                                    <span class="status on-progress">
+                                                        قيد التنقيذ
+                                                    </span>
+                                                </div>
+
+                                                <div class="the-project-price">
+                                                    <span>
+                                                        100
+                                                    </span>
+
+                                                    ريال
+                                                </div>
+                                            </div>
+                                            <div class="project-desc">
+                                                <p>
+                                                    الان مع شغف انجز مشاريعك عبر الانترنت بكل سهوله الان مع شغف انجز
+                                                    مشاريعك عبر
+                                                    الانترنت
+                                                    بكل سهوله الان مع شغف انجز مشاريعك عبر الانترنت بكل سهوله الان مع
+                                                    شغف انجز
+                                                    مشاريعك
+                                                    عبر
+                                                    الانترنت بكل سهوله
+
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!---->
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <!--charts-->
+                <div class="charts">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
+                            <div class="child">
+                                <div class="pie">
+                                    <canvas id="pie" height="100%" width="100%"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9">
+                            <div class="child">
+                                <div class="line-chart">
+                                    <canvas id="line" height="100%" width="100%"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--table-->
+                <div class="table-conrainer">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                            <div class="child">
+                                <div class="table-upper">
+                                    <h4>العملاء</h4>
+
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="far fa-cog"></i>
+                                            خيارات
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#"> الاحدث</a>
+                                            <a class="dropdown-item" href="#"> الاقدم</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tableScroll">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">الاسم</th>
+                                                <th scope="col"> وصف العمل</th>
+                                                <th scope="col">رقم المشروع</th>
+                                                <th scope="col">اسم المشروع</th>
+                                                <th scope="col">مده المشروع</th>
+                                                <th scope="col"> الحاله</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>فلان الفلاني</td>
+                                                <td>تصميم</td>
+                                                <td>23435</td>
+                                                <td>تصميم موقع العاب</td>
+                                                <td>شهر</td>
+                                                <td>
+                                                    <span class="status on-progress">
+                                                        قيد التنفيذ
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <!---->
+
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>فلان الفلاني</td>
+                                                <td>تصميم</td>
+                                                <td>23435</td>
+                                                <td>تصميم موقع العاب</td>
+                                                <td>شهر</td>
+                                                <td>
+                                                    <span class="status open">
+                                                        مفتوح
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <!---->
+
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>فلان الفلاني</td>
+                                                <td>تصميم</td>
+                                                <td>23435</td>
+                                                <td>تصميم موقع العاب</td>
+                                                <td>شهر</td>
+                                                <td>
+                                                    <span class="status closed">
+                                                        نشط
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <!---->
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!--scripts sources-->
+    <script src=" js/jquery.js"> </script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>
