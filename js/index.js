@@ -50,6 +50,30 @@ $(document).ready(function () {
         }
     });
 
+
+    $('.welcome').owlCarousel({
+        loop: true,
+        margin: 0,
+        nav: false,
+        rtl: true,
+        dots: true,
+        autoplay: true,
+        smartSpeed: 1000,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 1
+            }
+        }
+    });
+
     // shrinking nav
     // $(window).scroll(function () {
     //     if ($(document).scrollTop() > 60) {
@@ -79,6 +103,18 @@ $(document).ready(function () {
         $("#video-popout").removeClass("active");
     });
 
+
+    //onboarding welcoming slide
+
+    $("#view-welcome").click(function () {
+        $("#onboarding").addClass("open");
+        $("#onboarding-card").addClass("view");
+    });
+
+    $("#close-popout, #overlay").click(function () {
+        $("#overlay").removeClass("show");
+        $("#video-popout").removeClass("active");
+    });
 
 
 });

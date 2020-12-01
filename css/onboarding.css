@@ -1,0 +1,212 @@
+/* import font */
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap");
+
+@font-face {
+    font-family: DroidArabicKufi;
+    src: url('../webfonts/DroidArabicKufi.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: DroidArabicKufi;
+    src: url('../webfonts/DroidKufiRegular.ttf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: DroidArabicKufi;
+    src: url('../webfonts/DroidArabicKufiBold.ttf');
+    font-weight: 700;
+}
+
+/* variables and defaul css */
+:root {
+    --primary: #00AFA9;
+    --opacity: #02dad38c;
+    --accent: #00FCF3;
+    --whitesmoke: rgb(247, 247, 247);
+    --secondary: #169bf4;
+    --secondaryhover: #046baf;
+    --hover: #158885;
+    --pink: rgb(255, 97, 189);
+    --white: #fff;
+    --transition: .3s ease-in-out;
+    --padding: 100px 0;
+}
+
+body,
+html {
+    font-family: DroidArabicKufi;
+    overflow-x: hidden;
+    direction: rtl;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+button,
+input {
+    outline: none !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+.custom-container {
+    width: 85%;
+    margin: auto;
+}
+
+.text-righted {
+    text-align: right;
+}
+
+span.title {
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    background-color: var(--primary);
+    color: #fff;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+h2.title {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+}
+
+p.sub {
+    color: grey;
+    font-size: 0.88rem;
+    font-weight: 700;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.onboarding {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.226);
+    top: 0;
+    left: 0;
+    margin: auto;
+    transition: var(--transition);
+    z-index: -10;
+    display: none;
+}
+
+.onboarding .d-flex {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.onboarding.open {
+    z-index: 100;
+    display: block;
+}
+
+.onboarding .onboarding-card {
+    height: 80%;
+    width: 40%;
+    background-color: var(--white);
+    border-radius: 5px;
+    transition: var(--transition);
+    transform: scale(0);
+    z-index: -10;
+    position: relative;
+}
+
+.onboarding .onboarding-card.view {
+    transform: scale(1);
+    z-index: 100;
+}
+
+.onboarding .onboarding-card .item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    height: 100%;
+}
+
+.onboarding .onboarding-card .item .wrap {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    margin-top: 60px;
+}
+
+.onboarding .onboarding-card .item .welcome-img {
+    height: 40vh;
+    width: 60%;
+    margin: auto;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+
+.onboarding .onboarding-card .item .welcome-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.onboarding .onboarding-card .item .text h2 {
+    font-weight: 700;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.onboarding .onboarding-card .item .text p {
+    font-weight: 500;
+    text-align: center;
+    font-size: 0.88rem;
+}
+
+.onboarding .onboarding-card .item .text a {
+    display: inline-block;
+    margin: auto;
+    text-align: center;
+    font-size: 0.88rem;
+    text-decoration: none;
+    background-color: var(--primary);
+    padding: 16px 40px;
+    color: var(--white);
+    transition: var(--transition);
+    border-radius: 5px;
+}
+
+.onboarding .onboarding-card .item .text a:hover {
+    background-color: var(--hover);
+}
+
+@media(max-width:1000px) {
+    .onboarding .onboarding-card {
+        width: 95%;
+        height: auto;
+    }
+
+    .onboarding .onboarding-card .item .welcome-img {
+        height: 30vh;
+    }
+
+    .onboarding .onboarding-card .item .text h2 {
+        font-size: 1.2em;
+    }
+}
