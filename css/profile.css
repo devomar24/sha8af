@@ -25,7 +25,7 @@
     --opacity: #02dad38c;
     --accent: #00FCF3;
     --whitesmoke: rgb(247, 247, 247);
-    --lightgrey: rgba(250, 250, 250, 0.705);
+    --lightgrey: rgb(235, 235, 235);
     --secondary: #169bf4;
     --secondaryhover: #046baf;
     --hover: #158885;
@@ -635,32 +635,14 @@ p.sub {
 
 
 /* messages */
-
-.chat-wrapper {
-    padding: 20px 20px 100px 20px;
-}
-
-.chat-wrapper h4 {
-    font-weight: 700;
-    font-size: 1.4em;
-    padding: 0px;
-    margin: 20px 0px 40px 0;
-}
-
-.chat-wrapper .child {
-    padding: 20px;
-    border-radius: 5px;
-    background-color: var(--white);
-}
-
-.chat-wrapper .child .chat-search {
+.child .chat-search {
     justify-content: space-between;
     position: relative;
     width: 100%;
     margin: auto;
 }
 
-.chat-wrapper .child .chat-search .d-flex .input {
+.child .chat-search .d-flex .input {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -668,40 +650,40 @@ p.sub {
     flex: 1;
 }
 
-.chat-wrapper .child .chat-search .input input {
+.child .chat-search .input input {
     border: none;
     padding: 10px;
     font-size: 0.88rem;
     position: relative;
 }
 
-.chat-wrapper .child .chat-search button {
+.child .chat-search button {
     background-color: whitesmoke;
     font-size: 0.88rem;
     position: relative;
     flex: 1;
 }
 
-.chat-wrapper .child .recent {
+.child .recent {
     border-top: 1px solid whitesmoke;
     padding-top: 20px;
     overflow-y: scroll;
     height: 75vh;
 }
 
-.chat-wrapper .child .recent .person {
+.child .recent .person {
     border-bottom: 1px solid whitesmoke;
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
 
-.chat-wrapper .child .recent .person,
-.chat-wrapper .child .recent .person .details {
+.child .recent .person,
+.child .recent .person .details {
     display: flex;
     align-items: center;
 }
 
-.chat-wrapper .child .recent .person .profile {
+.child .recent .person .profile {
     height: 45px;
     width: 45px;
     margin-left: 12px;
@@ -710,41 +692,40 @@ p.sub {
     flex-shrink: 0;
 }
 
-.chat-wrapper .child .recent .person .profile img {
+.child .recent .person .profile img {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
-.chat-wrapper .child .recent .person .details {
+.child .recent .person .details {
     justify-content: space-between;
     width: 100%;
 }
 
-.chat-wrapper .child .recent .person .details h6 {
+.child .recent .person .details h6 {
     font-weight: 700;
     margin-bottom: 0;
     padding-bottom: 0;
     font-size: 0.90rem;
 }
 
-.chat-wrapper .child .recent .person .details a {
+.child .recent .person .details a {
     font-weight: 600;
     font-size: 0.75rem;
 }
 
-.chat-wrapper .child .recent .person .details .time {
+.child .recent .person .details .time {
     padding-left: 10px;
 }
 
-.chat-wrapper .child .recent .person .details .time span {
+.child .recent .person .details .time span {
     color: grey;
     font-size: 0.75rem;
 }
 
 
-
-.chat-wrapper .msgs-container .child .box-header {
+.msgs-container .child .box-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -753,41 +734,42 @@ p.sub {
     padding-bottom: 10px;
 }
 
-.chat-wrapper .msgs-container .child .box-header h6 {
+.msgs-container .child .box-header h6 {
     font-weight: 700;
 }
 
-.chat-wrapper .msgs-container .child .box-header span {
+.msgs-container .child .box-header span {
     font-size: 0.75rem;
     color: grey;
 }
 
-.chat-wrapper .msgs-container .child .msgs {
+.msgs-container .child .msgs {
     overflow-y: scroll;
     height: 60vh;
+    padding: 20px;
 }
 
-.chat-wrapper .msgs-container .child .msgs .msg-wrapper,
-.chat-wrapper .msgs-container .child .msgs .msg-wrapper .user {
+.msgs-container .child .msgs .msg-wrapper,
+.msgs-container .child .msgs .msg-wrapper .user {
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
 
-.chat-wrapper .msgs-container .child .msgs .msg-wrapper {
+.msgs-container .child .msgs .msg-wrapper {
     width: 80%;
     margin-bottom: 10px;
 }
 
-.chat-wrapper .msgs-container .child .msgs .msg-wrapper.message-left {
+.msgs-container .child .msgs .msg-wrapper.message-left {
     margin-right: auto;
 }
 
-.chat-wrapper .msgs-container .child .msgs .msg-wrapper.message-left .user {
+.msgs-container .child .msgs .msg-wrapper.message-left .user {
     flex-direction: row-reverse;
 }
 
-.chat-wrapper .msgs-container .child .msgs .msg-wrapper .user .profile {
+.msgs-container .child .msgs .msg-wrapper .user .profile {
     height: 40px;
     width: 40px;
     overflow: hidden;
@@ -795,50 +777,50 @@ p.sub {
     flex-shrink: 0;
 }
 
-.chat-wrapper .msgs-container .child .msgs .msg-wrapper .user .profile img {
+.msgs-container .child .msgs .msg-wrapper .user .profile img {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
-.chat-wrapper .msgs-container .child .msgs .msg-wrapper .user .msg-details {
+.msgs-container .child .msgs .msg-wrapper .user .msg-details {
     margin: 0 10px;
 }
 
-.chat-wrapper .msgs-container .child .msgs .msg-wrapper .user .msg-details p {
+.msgs-container .child .msgs .msg-wrapper .user .msg-details p {
     font-size: 0.80rem;
-    background-color: var(--secondary);
+    background-color: white !important;
     padding: 20px;
     border-radius: 1000px;
     color: var(--white);
 }
 
-.chat-wrapper .msgs-container .child .msgs .msg-wrapper.message-left .user .msg-details p {
+.msgs-container .child .msgs .msg-wrapper.message-left .user .msg-details p {
     background-color: var(--lightgrey);
     color: rgb(37, 37, 37);
 }
 
-.chat-wrapper .msgs-container .child .msgs .msg-wrapper .user .msg-details .image {
+.msgs-container .child .msgs .msg-wrapper .user .msg-details .image {
     height: 300px;
     width: 300px;
     border-radius: 5px;
     overflow: hidden;
 }
 
-.chat-wrapper .msgs-container .child .msgs .msg-wrapper .user .msg-details .image img {
+.msgs-container .child .msgs .msg-wrapper .user .msg-details .image img {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
-.chat-wrapper .msgs-container .child .msgs .msg-wrapper .user .msg-details .attached {
+.msgs-container .child .msgs .msg-wrapper .user .msg-details .attached {
     background-color: #FF9100;
     padding: 5px 10px;
     border-radius: 100px;
     color: var(--white);
 }
 
-.chat-wrapper .msgs-container .child .msgs .msg-wrapper .user .msg-details .attached a {
+.msgs-container .child .msgs .msg-wrapper .user .msg-details .attached a {
     color: var(--white);
 }
 
@@ -895,48 +877,63 @@ p.sub {
 }
 
 /* insert new msg */
-.chat-wrapper .msgs-container .child .insert {
+.msgs-container .child .insert {
     margin-top: 20px;
+    background-color: white;
+    padding-left: 40px;
 }
 
-.chat-wrapper .msgs-container .child .insert,
-.chat-wrapper .msgs-container .child .insert .inputs {
+.msgs-container .child .insert,
+.msgs-container .child .insert .inputs {
     display: flex;
+    background-color: white;
+
     align-items: center;
 }
 
-.chat-wrapper .msgs-container .child .insert form {
+.title-mass {
+    background-color: white;
+    text-align: center;
+    padding: 30px;
+    font-weight: 700;
+    font-size: 1.4em;
+    border: 1px solid rgb(189, 189, 189);
+}
+
+.msgs-container .child .insert form {
+    background-color: white;
     flex: 2;
 }
 
-.chat-wrapper .msgs-container .child .insert .inputs {
-    background-color: var(--lightgrey);
+.msgs-container .child .insert .inputs {
+    background-color: white;
+
     padding: 10px;
     border-radius: 10px;
     margin-left: 10px;
 }
 
-.chat-wrapper .msgs-container .child .insert .inputs input[type="file"] {
+.msgs-container .child .insert .inputs input[type="file"] {
     display: none;
 }
 
-.chat-wrapper .msgs-container .child .insert .inputs input[type="text"] {
+.msgs-container .child .insert .inputs input[type="text"] {
     border: none;
     background-color: transparent;
     font-size: 0.88rem;
 }
 
-.chat-wrapper .msgs-container .child .insert .inputs input[type="text"] {
+.msgs-container .child .insert .inputs input[type="text"] {
     flex: 2;
     padding: 10px;
 }
 
-.chat-wrapper .msgs-container .child .insert .inputs .files {
+.msgs-container .child .insert .inputs .files {
     display: flex;
     align-items: center;
 }
 
-.chat-wrapper .msgs-container .child .insert .inputs label {
+.msgs-container .child .insert .inputs label {
     margin-right: 10px;
     height: 40px;
     width: 40px;
@@ -951,12 +948,12 @@ p.sub {
     flex-shrink: 0;
 }
 
-.chat-wrapper .msgs-container .child .insert .inputs label:hover {
+.msgs-container .child .insert .inputs label:hover {
     background-color: var(--primary);
     color: var(--white);
 }
 
-.chat-wrapper .msgs-container .child .insert button {
+.msgs-container .child .insert button {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -966,7 +963,7 @@ p.sub {
     flex-shrink: 0;
 }
 
-.chat-wrapper .msgs-container .child .insert button:hover {
+.msgs-container .child .insert button:hover {
     background-color: var(--hover);
 }
 
@@ -1812,7 +1809,7 @@ p.sub {
 @media(max-width:1000px) {
 
     h2.title,
-    .chat-wrapper h4 {
+    h4 {
         font-size: 1em;
     }
 
@@ -1978,96 +1975,96 @@ p.sub {
     }
 
     /* chat */
-    .chat-wrapper .col-12 {
+    .col-12 {
         padding: 0;
     }
 
-    .chat-wrapper .child {
+    .child {
         width: 100%;
         padding: 20px;
     }
 
-    .chat-wrapper .child .recent {
+    .child .recent {
         height: 40vh;
     }
 
-    .chat-wrapper .child .recent .person .details h6,
-    .chat-wrapper .msgs-container .child .box-header h6 {
+    .child .recent .person .details h6,
+    .msgs-container .child .box-header h6 {
         font-size: 0.75rem;
     }
 
-    .chat-wrapper .child .chat-search .d-flex {
+    .child .chat-search .d-flex {
         width: 100%;
         justify-content: flex-start;
         align-items: flex-start;
     }
 
-    .chat-wrapper .child .chat-search .input input {
+    .child .chat-search .input input {
         width: 80%;
         font-size: 0.80rem;
     }
 
-    .chat-wrapper .child .chat-search .d-flex {
+    .child .chat-search .d-flex {
         margin-bottom: 10px;
     }
 
-    .chat-wrapper .child .chat-search button {
+    .child .chat-search button {
         font-size: 0.70rem;
         margin-top: 10px;
     }
 
-    .chat-wrapper .child .recent .person .profile,
-    .chat-wrapper .msgs-container .child .msgs .msg-wrapper .user .profile {
+    .child .recent .person .profile,
+    .msgs-container .child .msgs .msg-wrapper .user .profile {
         height: 35px;
         width: 35px;
     }
 
-    .chat-wrapper .child .recent .person .details a,
-    .chat-wrapper .child .recent .person .details .time span,
-    .chat-wrapper .msgs-container .child .box-header span,
-    .chat-wrapper .msgs-container .child .msgs .msg-wrapper .user .msg-details p,
-    .chat-wrapper .msgs-container .child .msgs .msg-wrapper .user .msg-details .attached a {
+    .child .recent .person .details a,
+    .child .recent .person .details .time span,
+    .msgs-container .child .box-header span,
+    .msgs-container .child .msgs .msg-wrapper .user .msg-details p,
+    .msgs-container .child .msgs .msg-wrapper .user .msg-details .attached a {
         font-size: 0.70rem;
     }
 
-    .chat-wrapper .msgs-container .child .msgs .msg-wrapper .user .msg-details p {
+    .msgs-container .child .msgs .msg-wrapper .user .msg-details p {
         padding: 10px;
         border-radius: 10px;
     }
 
-    .chat-wrapper .msgs-container {
+    .msgs-container {
         margin-top: 20px;
     }
 
-    .chat-wrapper .msgs-container .child .msgs .msg-wrapper {
+    .msgs-container .child .msgs .msg-wrapper {
         width: 100%;
     }
 
-    .chat-wrapper .msgs-container .child .msgs .msg-wrapper .user .msg-details .image {
+    .msgs-container .child .msgs .msg-wrapper .user .msg-details .image {
         height: 200px;
         width: 200px;
     }
 
-    .chat-wrapper .msgs-container .child .insert {
+    .msgs-container .child .insert {
         flex-direction: column;
     }
 
-    .chat-wrapper .msgs-container .child .insert form {
+    .msgs-container .child .insert form {
         width: 100%;
         flex: 1;
     }
 
-    .chat-wrapper .msgs-container .child .insert .inputs input[type="text"] {
+    .msgs-container .child .insert .inputs input[type="text"] {
         font-size: 0.70rem;
         flex: 1;
         width: 70%;
     }
 
-    .chat-wrapper .msgs-container .child .insert .inputs .files {
+    .msgs-container .child .insert .inputs .files {
         flex-direction: column;
     }
 
-    .chat-wrapper .msgs-container .child .insert button {
+    .msgs-container .child .insert button {
         margin-top: 10px;
         width: 100%;
     }
