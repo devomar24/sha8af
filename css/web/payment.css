@@ -113,7 +113,8 @@ p.sub {
     margin-bottom: 30px;
 }
 
-.payment .pay-input input {
+.payment .pay-input input,
+.payment .pay-input select {
     width: 100%;
     padding: 10px;
     font-size: 0.88rem;
@@ -121,6 +122,23 @@ p.sub {
     border-radius: 4px;
     border: 1px solid lightgrey;
     transition: var(--transition);
+}
+
+.payment .pay-input select {
+    -webkit-appearance: none;
+    position: relative;
+    -moz-appearance: none;
+    -o-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    width: 100%;
+    background: url("/img/icons/arrow-angle-pointing-down.svg") no-repeat 10px center;
+    background-size: 10px;
+    background-color: white;
+    cursor: pointer;
+    color: grey;
+    padding-left: 20px;
+    outline: none;
 }
 
 .payment .pay-input .selection-label {
