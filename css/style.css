@@ -1415,6 +1415,10 @@ section.cta .d-flex .btns a:last-of-type:hover {
     .terms h6 {
         font-size: 1em;
     }
+
+    .terms ul li {
+        font-size: 0.88rem;
+    }
 }
 
 @media(min-width : 2000px) {

@@ -1,0 +1,203 @@
+/* import font */
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap");
+
+@font-face {
+    font-family: DroidArabicKufi;
+    src: url('../webfonts/DroidArabicKufi.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: DroidArabicKufi;
+    src: url('../webfonts/DroidKufiRegular.ttf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: DroidArabicKufi;
+    src: url('../webfonts/DroidArabicKufiBold.ttf');
+    font-weight: 700;
+}
+
+/* variables and defaul css */
+:root {
+    --primary: #00AFA9;
+    --opacity: #02dad38c;
+    --accent: #00FCF3;
+    --whitesmoke: rgb(247, 247, 247);
+    --secondary: #169bf4;
+    --secondaryhover: #046baf;
+    --hover: #158885;
+    --pink: rgb(255, 97, 189);
+    --white: #fff;
+    --transition: .3s ease-in-out;
+    --padding: 100px 0;
+}
+
+body,
+html {
+    font-family: DroidArabicKufi;
+    overflow-x: hidden;
+    direction: rtl;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+button,
+input {
+    outline: none !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+.custom-container {
+    width: 85%;
+    margin: auto;
+}
+
+.text-righted {
+    text-align: right;
+}
+
+span.title {
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    background-color: var(--primary);
+    color: #fff;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+h2.title {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+}
+
+p.sub {
+    color: grey;
+    font-size: 0.88rem;
+    font-weight: 700;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+
+.payment {
+    padding: var(--padding);
+    background-color: whitesmoke;
+    margin-bottom: 20px;
+}
+
+.payment h4 {
+    margin-bottom: 30px;
+}
+
+.payment label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.80rem;
+}
+
+.payment .pay-input {
+    margin-bottom: 30px;
+}
+
+.payment .pay-input input {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.88rem;
+    color: black;
+    border-radius: 4px;
+    border: 1px solid lightgrey;
+    transition: var(--transition);
+}
+
+.payment .pay-input .selection-label {
+    background-color: saddlebrown;
+}
+
+.payment .pay-input input:hover {
+    border-color: grey;
+}
+
+.payment .pay-input input:focus {
+    border-color: var(--primary) !important;
+}
+
+.payment .pay-input input[type="checkbox"]:checked+.selection-label {
+    color: rebeccapurple !important;
+}
+
+/* select pay card */
+.payment .selections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.payment .checkbox-container .select-container input[type="checkbox"] {
+    display: none;
+}
+
+.payment .checkbox-container .select-container .select-labels {
+    background-color: #ffffff;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 0.88rem;
+    display: flex;
+    align-items: center;
+    border: 2px solid lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -3px;
+}
+
+.payment .checkbox-container .select-container .select-labels .image {
+    height: 60px;
+    width: 60px;
+}
+
+.payment .checkbox-container .select-container .select-labels .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.payment .checkbox-container .select-container input:checked+label {
+    color: #fff;
+    border: 2px solid var(--primary);
+}
+
+.payment button {
+    background-color: var(--primary);
+    color: white;
+    font-size: 0.88rem;
+    border: none;
+    padding: 14px 44px;
+    border-radius: 4px;
+    transition: var(--transition);
+    margin-top: 12px;
+    margin-right: auto;
+    display: block;
+}
+
+.payment button:hover {
+    background-color: var(--hover);
+}
